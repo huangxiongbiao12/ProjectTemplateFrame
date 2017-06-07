@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE728E081EE7E6FB00DB0516 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EE728E071EE7E6FB00DB0516 /* AFAppDotNetAPIClient.m */; };
 		EEDA4B861EE6B0A80089E4F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA4B851EE6B0A80089E4F6 /* main.m */; };
 		EEDA4B911EE6B0A80089E4F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDA4B901EE6B0A80089E4F6 /* Assets.xcassets */; };
 		EEDA4B941EE6B0A80089E4F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDA4B921EE6B0A80089E4F6 /* LaunchScreen.storyboard */; };
@@ -166,6 +167,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE728E061EE7E6FB00DB0516 /* AFAppDotNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAppDotNetAPIClient.h; sourceTree = "<group>"; };
+		EE728E071EE7E6FB00DB0516 /* AFAppDotNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAppDotNetAPIClient.m; sourceTree = "<group>"; };
 		EEDA4B811EE6B0A80089E4F6 /* ProjectTemplateFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectTemplateFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA4B851EE6B0A80089E4F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EEDA4B901EE6B0A80089E4F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -904,6 +907,8 @@
 		EEDA4C781EE6B0DE0089E4F6 /* NetWorking（网络层） */ = {
 			isa = PBXGroup;
 			children = (
+				EE728E061EE7E6FB00DB0516 /* AFAppDotNetAPIClient.h */,
+				EE728E071EE7E6FB00DB0516 /* AFAppDotNetAPIClient.m */,
 				EEDA4C791EE6B0DE0089E4F6 /* HttpRequstData.h */,
 				EEDA4C7A1EE6B0DE0089E4F6 /* HttpRequstData.m */,
 				EEDA4C7B1EE6B0DE0089E4F6 /* Model.h */,
@@ -1277,6 +1282,7 @@
 				EEDA4D651EE6B0DE0089E4F6 /* UIButton+WebCache.m in Sources */,
 				EEDA4D5C1EE6B0DE0089E4F6 /* NSImage+WebCache.m in Sources */,
 				EEDA4D4F1EE6B0DE0089E4F6 /* MJRefreshBackGifFooter.m in Sources */,
+				EE728E081EE7E6FB00DB0516 /* AFAppDotNetAPIClient.m in Sources */,
 				EEDA4D841EE6B0DE0089E4F6 /* NetStatusData.m in Sources */,
 				EEDA4DA41EE6B0DE0089E4F6 /* HWTabBar.m in Sources */,
 				EEDA4DA91EE6B0DE0089E4F6 /* LoginAlertTool.m in Sources */,
@@ -1583,6 +1589,7 @@
 				EEDA4BB01EE6B0A80089E4F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EEDA4BB11EE6B0A80089E4F6 /* Build configuration list for PBXNativeTarget "ProjectTemplateFrameTests" */ = {
 			isa = XCConfigurationList;
@@ -1591,6 +1598,7 @@
 				EEDA4BB31EE6B0A80089E4F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EEDA4BB41EE6B0A80089E4F6 /* Build configuration list for PBXNativeTarget "ProjectTemplateFrameUITests" */ = {
 			isa = XCConfigurationList;
@@ -1599,6 +1607,7 @@
 				EEDA4BB61EE6B0A80089E4F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

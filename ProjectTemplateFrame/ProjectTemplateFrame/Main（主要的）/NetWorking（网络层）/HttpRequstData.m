@@ -7,6 +7,7 @@
 //
 
 #import "HttpRequstData.h"
+#import "AFAppDotNetAPIClient.h"
 
 /**
  *  是否开启https SSL 验证
@@ -41,7 +42,8 @@ static int timeOut = 30;
 +(void)getUrl:(NSString*)url parameters:(NSDictionary*)parameters success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure
 {
     [[NetStatusData shareNetStatus] checkNetStatus];
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
+;
     manager.requestSerializer.timeoutInterval = timeOut;
     // 加上这行代码，https ssl 验证。
     if(openHttpsSSL)
@@ -84,7 +86,8 @@ static int timeOut = 30;
 
 +(void)getNoHUDUrl:(NSString*)url parameters:(NSDictionary*)parameters success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
     [[NetStatusData shareNetStatus] checkNetStatus];
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
+;
     manager.requestSerializer.timeoutInterval = timeOut;
     // 加上这行代码，https ssl 验证。
     if(openHttpsSSL)
@@ -126,7 +129,8 @@ static int timeOut = 30;
 #pragma mark-------封装请求
 +(void)postUrl:(NSString*)url parameters:(NSDictionary*)parameters showHUD:(BOOL)show success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
     [[NetStatusData shareNetStatus] checkNetStatus];
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
+;
     manager.requestSerializer.timeoutInterval = timeOut;
     // 加上这行代码，https ssl 验证。
     if(openHttpsSSL)
@@ -206,7 +210,8 @@ static int timeOut = 30;
 
 +(NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))block progress:(void (^)(NSProgress *))uploadProgress success:(void (^)(NSURLSessionDataTask *, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError *))failure {
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
+;
     // 加上这行代码，https ssl 验证。
     if(openHttpsSSL)
     {
