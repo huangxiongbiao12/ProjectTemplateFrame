@@ -7,6 +7,7 @@
 //
 
 #import "HXBNavigationController.h"
+#import "BGColorTool.h"
 
 @interface HXBNavigationController ()<UIGestureRecognizerDelegate>
 
@@ -28,7 +29,7 @@
     UIBarButtonItem *item = [UIBarButtonItem appearance];
     [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:15]} forState:UIControlStateNormal];
     
-    [bar setBackgroundImage:[HXBColor imageFromColor:kNavBarMainColor] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    [bar setBackgroundImage:[BGColorTool imageFromColor:kNavBarMainColor] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
     [bar setShadowImage:[[UIImage alloc] init]];
 }
 

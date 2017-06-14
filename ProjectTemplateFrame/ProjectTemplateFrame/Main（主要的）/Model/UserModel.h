@@ -6,9 +6,9 @@
 //  Copyright © 2016年 huangxiongbiao. All rights reserved.
 //
 
-#import "Model.h"
+#import "BGBaseModel.h"
 
-@interface UserModel : Model
+@interface UserModel : BGBaseModel
 
 @property(nonatomic,copy)NSString *k_user_id;//: 手机号
 @property(nonatomic,copy)NSString *k_name;//: 用户姓名

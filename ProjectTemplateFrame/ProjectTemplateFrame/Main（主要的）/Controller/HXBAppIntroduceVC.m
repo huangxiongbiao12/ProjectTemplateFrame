@@ -169,7 +169,7 @@
     startBtn.clipsToBounds = YES;
     startBtn.layer.cornerRadius = 5;
     startBtn.backgroundColor = kButtonNomDefautColor;
-    [startBtn setBackgroundImage:[HXBColor imageFromColor:kButtonHeiDefautColor] forState:UIControlStateHighlighted];
+    [startBtn setBackgroundImage:[BGColorTool imageFromColor:kButtonHeiDefautColor] forState:UIControlStateHighlighted];
 }
 
 - (void)shareClick:(UIButton *)shareBtn

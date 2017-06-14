@@ -25,9 +25,9 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    if (![HXBSaveTool objectForKey:@"isFirst"]) {
+    if (![BGSaveTool objectForKey:@"isFirst"]) {
         self.window.rootViewController = [[HXBAppIntroduceVC alloc] init];
-        [HXBSaveTool setValue:@"is" forKey:@"isFirst"];
+        [BGSaveTool setValue:@"is" forKey:@"isFirst"];
     }else{
         self.window.rootViewController = [[HXBTabbarControlle alloc] init];
     }

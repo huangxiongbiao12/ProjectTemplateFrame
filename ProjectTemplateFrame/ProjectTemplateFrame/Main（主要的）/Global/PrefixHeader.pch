@@ -16,7 +16,8 @@
 #import "DefineHeader.h"
 #import "UrlHeader.h"
 #import "Libs.h"
-#import "Tools.h"
-#import "LoginAlertTool.h"
+#import "BGToolsHeader.h"
+#import "BGNetworking.h"
+#import "NSObject+BGNetworking.h"
 
 #endif /* PrefixHeader_pch */

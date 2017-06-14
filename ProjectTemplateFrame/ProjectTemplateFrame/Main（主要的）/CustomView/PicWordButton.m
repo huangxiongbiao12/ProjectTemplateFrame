@@ -43,7 +43,7 @@
     if (hightImage) {
        [self setImage:[UIImage imageNamed:hightImage] forState:UIControlStateHighlighted];
     }else {
-        [self setBackgroundImage:[HXBColor imageFromColor:kBackgroundGrayDefautColor] forState:UIControlStateHighlighted];
+        [self setBackgroundImage:[BGColorTool imageFromColor:kBackgroundGrayDefautColor] forState:UIControlStateHighlighted];
     }
     [self setTitle:title forState:UIControlStateNormal];
     [self setTitleColor:kBlackMian1Color forState:UIControlStateNormal];

@@ -40,7 +40,7 @@
     self.loginButton.layer.cornerRadius = 3;
     self.loginButton.enabled = NO;
 //    [self.loginButton setBackgroundImage:[HXBColor imageFromColor:kButtonDisDefautColor] forState:UIControlStateDisabled];
-    [self.loginButton setBackgroundImage:[HXBColor imageFromColor:kNavBarMainColor] forState:UIControlStateNormal];
+    [self.loginButton setBackgroundImage:[BGColorTool imageFromColor:kNavBarMainColor] forState:UIControlStateNormal];
     
     [self.passWordTF addTarget:self action:@selector(tfChange:) forControlEvents:UIControlEventEditingChanged];
     [self.phoneTF addTarget:self action:@selector(tfChange:) forControlEvents:UIControlEventEditingChanged];
@@ -113,16 +113,16 @@
     if (![NSString validateMobile:self.phoneTF.text]) { [MBProgressHUD showError:@"请输入正确的手机号码"]; return; }
     if (self.passWordTF.text.length < 6) { [MBProgressHUD showError:@"密码不能少于6位"]; return; }
     
-    [HttpRequstData postUrl:kLoginCommonUrl parameters:@{@"phone":self.phoneTF.text,@"password":self.passWordTF.text} success:^(id responseObject) {
+    [BGNetworking postUrl:kLoginCommonUrl parameters:@{@"phone":self.phoneTF.text,@"password":self.passWordTF.text} success:^(id responseObject) {
         UserModel *user = [UserModel new];
         [user setValuesForKeysWithDictionary:responseObject[@"data"]];
         NSData *data = [NSKeyedArchiver archivedDataWithRootObject:user];
-        [HXBSaveTool setObject:user.usrid forKey:kUserID];
-        [HXBSaveTool setObject:data forKey:kUser];
-        [HXBSaveTool setValue:@"klofon" forKey:kLogin];
+        [BGSaveTool setObject:user.usrid forKey:kUserID];
+        [BGSaveTool setObject:data forKey:kUser];
+        [BGSaveTool setValue:@"klofon" forKey:kLogin];
         //        登陆时上传token
         AppDelegate *appdelegate = kAppDelegate;
-        [HttpRequstData postNoHUDUrl:kSetDeviceTokenUrl parameters:@{@"userid":[HXBSaveTool objectForKey:kUserID],@"device_token":appdelegate.token?appdelegate.token:@"",@"ispush":@"1"} success:^(id responseObject) {
+        [BGNetworking postNoHUDUrl:kSetDeviceTokenUrl parameters:@{@"userid":[BGSaveTool objectForKey:kUserID],@"device_token":appdelegate.token?appdelegate.token:@"",@"ispush":@"1"} success:^(id responseObject) {
             
         } failure:^(NSError *error) {
             

@@ -38,12 +38,12 @@
     
     self.sureBtn.layer.cornerRadius = 3;
     self.sureBtn.enabled = NO;
-//    [self.sureBtn setBackgroundImage:[HXBColor imageFromColor:kButtonDisDefautColor] forState:UIControlStateDisabled];
-    [self.sureBtn setBackgroundImage:[HXBColor imageFromColor:kNavBarMainColor] forState:UIControlStateNormal];
+//    [self.sureBtn setBackgroundImage:[BGColorTool imageFromColor:kButtonDisDefautColor] forState:UIControlStateDisabled];
+    [self.sureBtn setBackgroundImage:[BGColorTool imageFromColor:kNavBarMainColor] forState:UIControlStateNormal];
     
     self.getVertiCodeBtn.enabled = NO;
-   // [self.getVertiCodeBtn setBackgroundImage:[HXBColor imageFromColor:kButtonDisDefautColor] forState:UIControlStateDisabled];
-    //[self.getVertiCodeBtn setBackgroundImage:[HXBColor imageFromColor:kButtonNomDefautColor] forState:UIControlStateNormal];
+   // [self.getVertiCodeBtn setBackgroundImage:[BGColorTool imageFromColor:kButtonDisDefautColor] forState:UIControlStateDisabled];
+    //[self.getVertiCodeBtn setBackgroundImage:[BGColorTool imageFromColor:kButtonNomDefautColor] forState:UIControlStateNormal];
     
     [self.passwordTF addTarget:self action:@selector(tfChange:) forControlEvents:UIControlEventEditingChanged];
     [self.userTF addTarget:self action:@selector(tfChange:) forControlEvents:UIControlEventEditingChanged];
@@ -113,7 +113,7 @@
     if (![NSString validateMobile:self.userTF.text]) {
         [MBProgressHUD showError:@"输入正确的手机号"]; return;
     }
-    [HttpRequstData postUrl:kGetPhoneVertifyUrl parameters:@{@"phone":self.userTF.text} success:^(id responseObject) {
+    [BGNetworking postUrl:kGetPhoneVertifyUrl parameters:@{@"phone":self.userTF.text} success:^(id responseObject) {
         DDLog(@"验证码====%@",responseObject);
         _time = 60;
         [sender setTitle:[NSString stringWithFormat:@"倒计时 %ld s",_time] forState:UIControlStateNormal];
@@ -158,7 +158,7 @@
         [self.getVertiCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
         self.getVertiCodeBtn.enabled = YES;
     }
-    [HttpRequstData postUrl:kSetNewPwdUrl parameters:@{@"phone":self.userTF.text,@"verifyCode":self.vertifyTF.text,@"newPwd":self.passwordTF.text} success:^(id responseObject) {
+    [BGNetworking postUrl:kSetNewPwdUrl parameters:@{@"phone":self.userTF.text,@"verifyCode":self.vertifyTF.text,@"newPwd":self.passwordTF.text} success:^(id responseObject) {
         [self.navigationController popViewControllerAnimated:YES];
     } failure:^(NSError *error) {
         

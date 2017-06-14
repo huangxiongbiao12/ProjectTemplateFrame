@@ -38,7 +38,7 @@
     self.sureBtn.layer.cornerRadius = 3;
     self.sureBtn.enabled = NO;
 //    [self.sureBtn setBackgroundImage:[HXBColor imageFromColor:kButtonDisDefautColor] forState:UIControlStateDisabled];
-    [self.sureBtn setBackgroundImage:[HXBColor imageFromColor:kNavBarMainColor] forState:UIControlStateNormal];
+    [self.sureBtn setBackgroundImage:[BGColorTool imageFromColor:kNavBarMainColor] forState:UIControlStateNormal];
     
     self.getVertiCodeBtn.enabled = NO;
 //    [self.getVertiCodeBtn setBackgroundImage:[HXBColor imageFromColor:kButtonDisDefautColor] forState:UIControlStateDisabled];
@@ -97,7 +97,7 @@
         [self.getVertiCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
         self.getVertiCodeBtn.enabled = YES;
     }
-    [HttpRequstData postUrl:kUseRegisterUrl parameters:@{@"phone":self.userTF.text,@"verifyCode":self.vertifyTF.text,@"password":self.passwordTF.text} success:^(id responseObject) {
+    [BGNetworking postUrl:kUseRegisterUrl parameters:@{@"phone":self.userTF.text,@"verifyCode":self.vertifyTF.text,@"password":self.passwordTF.text} success:^(id responseObject) {
         if (_regsiterSuc) {
             _regsiterSuc(self.userTF.text,self.passwordTF.text);
         }
@@ -113,7 +113,7 @@
     if (![NSString validateMobile:self.userTF.text]) {
         [MBProgressHUD showError:@"输入正确的手机号"]; return;
     }
-    [HttpRequstData postUrl:kGetPhoneVertifyUrl parameters:@{@"phone":self.userTF.text} success:^(id responseObject) {
+    [BGNetworking postUrl:kGetPhoneVertifyUrl parameters:@{@"phone":self.userTF.text} success:^(id responseObject) {
         DDLog(@"验证码====%@",responseObject);
         _time = 60;
         [sender setTitle:[NSString stringWithFormat:@"倒计时 %ld s",_time] forState:UIControlStateNormal];

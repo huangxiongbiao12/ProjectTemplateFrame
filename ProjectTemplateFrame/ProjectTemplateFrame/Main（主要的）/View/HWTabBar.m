@@ -7,7 +7,6 @@
 //
 
 #import "HWTabBar.h"
-#import "HXBColor.h"
 #import "TabbarButton.h"
 
 @interface HWTabBar()
