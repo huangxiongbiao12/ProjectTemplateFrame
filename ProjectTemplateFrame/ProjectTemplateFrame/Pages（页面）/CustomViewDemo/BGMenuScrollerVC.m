@@ -8,7 +8,6 @@
 
 #import "BGMenuScrollerVC.h"
 #import "BGMenuVCScrollerView.h"
-#import "DefineHeader.h"
 #import "PostFatherVC.h"
 
 @interface BGMenuScrollerVC ()

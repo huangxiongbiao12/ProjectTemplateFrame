@@ -22,10 +22,7 @@
     [super viewDidLoad];
     //数据
     [self initData];
-    
-    _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
+    _tableView = [BGViewFactory creatTableViewDelegate:self];
     [self.view addSubview:_tableView];
 }
 

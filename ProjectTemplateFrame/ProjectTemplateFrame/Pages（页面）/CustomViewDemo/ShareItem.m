@@ -7,7 +7,6 @@
 //
 
 #import "ShareItem.h"
-#import "DefineHeader.h"
 
 @implementation ShareItem
 

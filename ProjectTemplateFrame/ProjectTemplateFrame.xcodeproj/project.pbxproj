@@ -73,7 +73,6 @@
 		EEDA4BAA1EE6B0A80089E4F6 /* ProjectTemplateFrameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA4BA91EE6B0A80089E4F6 /* ProjectTemplateFrameUITests.m */; };
 		EEDA4D2E1EE6B0DE0089E4F6 /* AppDelegate+Initialize.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA4BBA1EE6B0DE0089E4F6 /* AppDelegate+Initialize.m */; };
 		EEDA4D2F1EE6B0DE0089E4F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA4BBC1EE6B0DE0089E4F6 /* AppDelegate.m */; };
-		EEDA4D301EE6B0DE0089E4F6 /* FatherListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA4BBF1EE6B0DE0089E4F6 /* FatherListVC.m */; };
 		EEDA4D311EE6B0DE0089E4F6 /* ForgetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA4BC11EE6B0DE0089E4F6 /* ForgetVC.m */; };
 		EEDA4D321EE6B0DE0089E4F6 /* ForgetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEDA4BC21EE6B0DE0089E4F6 /* ForgetVC.xib */; };
 		EEDA4D331EE6B0DE0089E4F6 /* HXBAppIntroduceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA4BC41EE6B0DE0089E4F6 /* HXBAppIntroduceVC.m */; };
@@ -303,8 +302,6 @@
 		EEDA4BBA1EE6B0DE0089E4F6 /* AppDelegate+Initialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Initialize.m"; sourceTree = "<group>"; };
 		EEDA4BBB1EE6B0DE0089E4F6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EEDA4BBC1EE6B0DE0089E4F6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EEDA4BBE1EE6B0DE0089E4F6 /* FatherListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FatherListVC.h; sourceTree = "<group>"; };
-		EEDA4BBF1EE6B0DE0089E4F6 /* FatherListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FatherListVC.m; sourceTree = "<group>"; };
 		EEDA4BC01EE6B0DE0089E4F6 /* ForgetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetVC.h; sourceTree = "<group>"; };
 		EEDA4BC11EE6B0DE0089E4F6 /* ForgetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetVC.m; sourceTree = "<group>"; };
 		EEDA4BC21EE6B0DE0089E4F6 /* ForgetVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetVC.xib; sourceTree = "<group>"; };
@@ -500,6 +497,8 @@
 				EE7599B71EF22DB900CD3BEB /* 2.jpeg */,
 				EE7599B81EF22DB900CD3BEB /* 3.jpeg */,
 				EE7599C31EF22DB900CD3BEB /* img_ad_banner@2x.png */,
+				EE7599CC1EF22DB900CD3BEB /* ViewController.h */,
+				EE7599CD1EF22DB900CD3BEB /* ViewController.m */,
 				EE7599B91EF22DB900CD3BEB /* BGCommonButtonVC.h */,
 				EE7599BA1EF22DB900CD3BEB /* BGCommonButtonVC.m */,
 				EE7599BB1EF22DB900CD3BEB /* BGLoadingHUDVC.h */,
@@ -510,16 +509,14 @@
 				EE7599C01EF22DB900CD3BEB /* BGMenuScrollerVC.m */,
 				EE7599C11EF22DB900CD3BEB /* BGPopDemoVC.h */,
 				EE7599C21EF22DB900CD3BEB /* BGPopDemoVC.m */,
+				EE7599CA1EF22DB900CD3BEB /* SimpleAnimationButtomVC.h */,
+				EE7599CB1EF22DB900CD3BEB /* SimpleAnimationButtomVC.m */,
 				EE7599C41EF22DB900CD3BEB /* PostFatherVC.h */,
 				EE7599C51EF22DB900CD3BEB /* PostFatherVC.m */,
 				EE7599C61EF22DB900CD3BEB /* ShareCell.h */,
 				EE7599C71EF22DB900CD3BEB /* ShareCell.m */,
 				EE7599C81EF22DB900CD3BEB /* ShareItem.h */,
 				EE7599C91EF22DB900CD3BEB /* ShareItem.m */,
-				EE7599CA1EF22DB900CD3BEB /* SimpleAnimationButtomVC.h */,
-				EE7599CB1EF22DB900CD3BEB /* SimpleAnimationButtomVC.m */,
-				EE7599CC1EF22DB900CD3BEB /* ViewController.h */,
-				EE7599CD1EF22DB900CD3BEB /* ViewController.m */,
 			);
 			path = CustomViewDemo;
 			sourceTree = "<group>";
@@ -778,8 +775,6 @@
 		EEDA4BBD1EE6B0DE0089E4F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EEDA4BBE1EE6B0DE0089E4F6 /* FatherListVC.h */,
-				EEDA4BBF1EE6B0DE0089E4F6 /* FatherListVC.m */,
 				EEDA4BC01EE6B0DE0089E4F6 /* ForgetVC.h */,
 				EEDA4BC11EE6B0DE0089E4F6 /* ForgetVC.m */,
 				EEDA4BC21EE6B0DE0089E4F6 /* ForgetVC.xib */,
@@ -1316,7 +1311,6 @@
 				EEA5F6A41EF0EF680043A8C8 /* SearchManager.m in Sources */,
 				EEDA4D611EE6B0DE0089E4F6 /* SDWebImageDownloader.m in Sources */,
 				EEA5F6A11EF0EF680043A8C8 /* LocationGeocoder.m in Sources */,
-				EEDA4D301EE6B0DE0089E4F6 /* FatherListVC.m in Sources */,
 				EEA5F6B61EF0EF880043A8C8 /* BGNetStatusChecker.m in Sources */,
 				EEDA4D581EE6B0DE0089E4F6 /* UIScrollView+MJExtension.m in Sources */,
 				EEDA4D471EE6B0DE0089E4F6 /* MJRefreshAutoFooter.m in Sources */,
@@ -1580,6 +1574,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ProjectTemplateFrame/Main（主要的）/Global/PrefixHeader.pch";
 				INFOPLIST_FILE = ProjectTemplateFrame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sihan.ProjectTemplateFrame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1594,6 +1589,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ProjectTemplateFrame/Main（主要的）/Global/PrefixHeader.pch";
 				INFOPLIST_FILE = ProjectTemplateFrame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sihan.ProjectTemplateFrame;
 				PRODUCT_NAME = "$(TARGET_NAME)";

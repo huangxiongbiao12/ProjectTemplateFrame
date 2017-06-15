@@ -8,7 +8,6 @@
 
 #import "BGLoopBannerViewVC.h"
 #import "BGLoopBannerView.h"
-#import "DefineHeader.h"
 
 @interface BGLoopBannerViewVC ()
 

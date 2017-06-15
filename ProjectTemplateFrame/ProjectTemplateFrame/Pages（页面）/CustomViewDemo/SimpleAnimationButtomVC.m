@@ -8,7 +8,6 @@
 
 #import "SimpleAnimationButtomVC.h"
 #import "BGOpenDoorBtn.h"
-#import "UIView+BG_Tool.h"
 
 @interface SimpleAnimationButtomVC ()
 {

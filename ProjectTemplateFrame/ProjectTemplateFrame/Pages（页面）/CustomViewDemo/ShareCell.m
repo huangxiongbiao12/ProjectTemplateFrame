@@ -7,8 +7,6 @@
 //
 
 #import "ShareCell.h"
-#import "UIView+BG_Tool.h"
-#import "DefineHeader.h"
 
 @interface ShareCell ()
 {

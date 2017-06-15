@@ -8,8 +8,6 @@
 
 #import "BGCommonButtonVC.h"
 #import "BGCommonButton.h"
-#import "UIView+BG_Tool.h"
-#import "DefineHeader.h"
 
 @interface BGCommonButtonVC ()
 
