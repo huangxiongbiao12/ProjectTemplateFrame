@@ -36,6 +36,12 @@
 		EE7599D91EF22DB900CD3BEB /* ShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599C91EF22DB900CD3BEB /* ShareItem.m */; };
 		EE7599DA1EF22DB900CD3BEB /* SimpleAnimationButtomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599CB1EF22DB900CD3BEB /* SimpleAnimationButtomVC.m */; };
 		EE7599DB1EF22DB900CD3BEB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599CD1EF22DB900CD3BEB /* ViewController.m */; };
+		EE7599E91EF25C8300CD3BEB /* BGSettingBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599DF1EF25C8300CD3BEB /* BGSettingBaseController.m */; };
+		EE7599EA1EF25C8300CD3BEB /* BGSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599E21EF25C8300CD3BEB /* BGSettingGroup.m */; };
+		EE7599EB1EF25C8300CD3BEB /* BGSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599E41EF25C8300CD3BEB /* BGSettingItem.m */; };
+		EE7599EC1EF25C8300CD3BEB /* CellArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7599E61EF25C8300CD3BEB /* CellArrow@2x.png */; };
+		EE7599ED1EF25C8300CD3BEB /* BGSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599E81EF25C8300CD3BEB /* BGSettingCell.m */; };
+		EE7599F01EF25DBC00CD3BEB /* BGSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599EF1EF25DBC00CD3BEB /* BGSettingVC.m */; };
 		EEA5F6931EF0EF680043A8C8 /* NSData+BG_Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA5F65E1EF0EF680043A8C8 /* NSData+BG_Tool.m */; };
 		EEA5F6941EF0EF680043A8C8 /* NSDate+BG_Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA5F6601EF0EF680043A8C8 /* NSDate+BG_Tool.m */; };
 		EEA5F6951EF0EF680043A8C8 /* NSMutableDictionary+BG_Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA5F6621EF0EF680043A8C8 /* NSMutableDictionary+BG_Tool.m */; };
@@ -227,6 +233,17 @@
 		EE7599CB1EF22DB900CD3BEB /* SimpleAnimationButtomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAnimationButtomVC.m; sourceTree = "<group>"; };
 		EE7599CC1EF22DB900CD3BEB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EE7599CD1EF22DB900CD3BEB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EE7599DE1EF25C8300CD3BEB /* BGSettingBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSettingBaseController.h; sourceTree = "<group>"; };
+		EE7599DF1EF25C8300CD3BEB /* BGSettingBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSettingBaseController.m; sourceTree = "<group>"; };
+		EE7599E11EF25C8300CD3BEB /* BGSettingGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSettingGroup.h; sourceTree = "<group>"; };
+		EE7599E21EF25C8300CD3BEB /* BGSettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSettingGroup.m; sourceTree = "<group>"; };
+		EE7599E31EF25C8300CD3BEB /* BGSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSettingItem.h; sourceTree = "<group>"; };
+		EE7599E41EF25C8300CD3BEB /* BGSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSettingItem.m; sourceTree = "<group>"; };
+		EE7599E61EF25C8300CD3BEB /* CellArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CellArrow@2x.png"; sourceTree = "<group>"; };
+		EE7599E71EF25C8300CD3BEB /* BGSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSettingCell.h; sourceTree = "<group>"; };
+		EE7599E81EF25C8300CD3BEB /* BGSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSettingCell.m; sourceTree = "<group>"; };
+		EE7599EE1EF25DBC00CD3BEB /* BGSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSettingVC.h; sourceTree = "<group>"; };
+		EE7599EF1EF25DBC00CD3BEB /* BGSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSettingVC.m; sourceTree = "<group>"; };
 		EEA5F65D1EF0EF680043A8C8 /* NSData+BG_Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+BG_Tool.h"; sourceTree = "<group>"; };
 		EEA5F65E1EF0EF680043A8C8 /* NSData+BG_Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+BG_Tool.m"; sourceTree = "<group>"; };
 		EEA5F65F1EF0EF680043A8C8 /* NSDate+BG_Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BG_Tool.h"; sourceTree = "<group>"; };
@@ -499,6 +516,8 @@
 				EE7599C31EF22DB900CD3BEB /* img_ad_banner@2x.png */,
 				EE7599CC1EF22DB900CD3BEB /* ViewController.h */,
 				EE7599CD1EF22DB900CD3BEB /* ViewController.m */,
+				EE7599EE1EF25DBC00CD3BEB /* BGSettingVC.h */,
+				EE7599EF1EF25DBC00CD3BEB /* BGSettingVC.m */,
 				EE7599B91EF22DB900CD3BEB /* BGCommonButtonVC.h */,
 				EE7599BA1EF22DB900CD3BEB /* BGCommonButtonVC.m */,
 				EE7599BB1EF22DB900CD3BEB /* BGLoadingHUDVC.h */,
@@ -524,6 +543,7 @@
 		EE75995F1EF22C6400CD3BEB /* BGCustomView */ = {
 			isa = PBXGroup;
 			children = (
+				EE7599DC1EF25C6E00CD3BEB /* BGBaseSettingVC */,
 				EE7599601EF22C6400CD3BEB /* BGAnimationBtn */,
 				EE7599631EF22C6400CD3BEB /* BGCommonButton */,
 				EE7599671EF22C6400CD3BEB /* BGCommonPopView */,
@@ -599,6 +619,46 @@
 				EE75997F1EF22C6400CD3BEB /* FatherListVC.m */,
 			);
 			path = BGMenuVCScrollerView;
+			sourceTree = "<group>";
+		};
+		EE7599DC1EF25C6E00CD3BEB /* BGBaseSettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				EE7599DD1EF25C8300CD3BEB /* Controller */,
+				EE7599E01EF25C8300CD3BEB /* Model */,
+				EE7599E51EF25C8300CD3BEB /* View */,
+			);
+			path = BGBaseSettingVC;
+			sourceTree = "<group>";
+		};
+		EE7599DD1EF25C8300CD3BEB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE7599DE1EF25C8300CD3BEB /* BGSettingBaseController.h */,
+				EE7599DF1EF25C8300CD3BEB /* BGSettingBaseController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE7599E01EF25C8300CD3BEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE7599E11EF25C8300CD3BEB /* BGSettingGroup.h */,
+				EE7599E21EF25C8300CD3BEB /* BGSettingGroup.m */,
+				EE7599E31EF25C8300CD3BEB /* BGSettingItem.h */,
+				EE7599E41EF25C8300CD3BEB /* BGSettingItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE7599E51EF25C8300CD3BEB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE7599E61EF25C8300CD3BEB /* CellArrow@2x.png */,
+				EE7599E71EF25C8300CD3BEB /* BGSettingCell.h */,
+				EE7599E81EF25C8300CD3BEB /* BGSettingCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EEA5F65B1EF0EF680043A8C8 /* BGTools */ = {
@@ -1260,6 +1320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7599EC1EF25C8300CD3BEB /* CellArrow@2x.png in Resources */,
 				EEDA4D7F1EE6B0DE0089E4F6 /* TabbarButton.xib in Resources */,
 				EEDA4D321EE6B0DE0089E4F6 /* ForgetVC.xib in Resources */,
 				EEDA4B941EE6B0A80089E4F6 /* LaunchScreen.storyboard in Resources */,
@@ -1350,6 +1411,8 @@
 				EEDA4D3A1EE6B0DE0089E4F6 /* AFHTTPSessionManager.m in Sources */,
 				EEDA4D5E1EE6B0DE0089E4F6 /* SDImageCacheConfig.m in Sources */,
 				EEDA4D401EE6B0DE0089E4F6 /* MBProgressHUD+MJ.m in Sources */,
+				EE7599E91EF25C8300CD3BEB /* BGSettingBaseController.m in Sources */,
+				EE7599F01EF25DBC00CD3BEB /* BGSettingVC.m in Sources */,
 				EEDA4D6F1EE6B0DE0089E4F6 /* TZAssetCell.m in Sources */,
 				EEA5F6931EF0EF680043A8C8 /* NSData+BG_Tool.m in Sources */,
 				EEDA4B861EE6B0A80089E4F6 /* main.m in Sources */,
@@ -1394,6 +1457,7 @@
 				EE7599851EF22C6400CD3BEB /* BGLoadingHUD.m in Sources */,
 				EEA5F6B71EF0EF880043A8C8 /* BGNetworking.m in Sources */,
 				EE7599861EF22C6400CD3BEB /* GifView.m in Sources */,
+				EE7599EA1EF25C8300CD3BEB /* BGSettingGroup.m in Sources */,
 				EEDA4D7A1EE6B0DE0089E4F6 /* DoubleTitleButton.m in Sources */,
 				EEA5F69D1EF0EF680043A8C8 /* UIResponder+BG_Tool.m in Sources */,
 				EEDA4D811EE6B0DE0089E4F6 /* UserModel.m in Sources */,
@@ -1403,6 +1467,7 @@
 				EEDA4D421EE6B0DE0089E4F6 /* MBProgressHUD.m in Sources */,
 				EEDA4D511EE6B0DE0089E4F6 /* MJRefreshBackStateFooter.m in Sources */,
 				EEA5F6A21EF0EF680043A8C8 /* LocationManager.m in Sources */,
+				EE7599ED1EF25C8300CD3BEB /* BGSettingCell.m in Sources */,
 				EE75998A1EF22C6400CD3BEB /* BGLoopBannerView.m in Sources */,
 				EEDA4D3C1EE6B0DE0089E4F6 /* AFSecurityPolicy.m in Sources */,
 				EEDA4D7B1EE6B0DE0089E4F6 /* HXBSearchBar.m in Sources */,
@@ -1428,6 +1493,7 @@
 				EE7599D31EF22DB900CD3BEB /* BGLoopBannerViewVC.m in Sources */,
 				EEA5F6A91EF0EF680043A8C8 /* BGViewFactory.m in Sources */,
 				EE7599DB1EF22DB900CD3BEB /* ViewController.m in Sources */,
+				EE7599EB1EF25C8300CD3BEB /* BGSettingItem.m in Sources */,
 				EEDA4D351EE6B0DE0089E4F6 /* HXBTabbarControlle.m in Sources */,
 				EEA5F69C1EF0EF680043A8C8 /* UINavigationItem+BG_Tool.m in Sources */,
 			);

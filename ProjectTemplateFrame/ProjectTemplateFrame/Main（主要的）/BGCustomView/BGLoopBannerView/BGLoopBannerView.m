@@ -179,19 +179,21 @@
 
 -(void)setPageType:(BGLoopBannerViewPageType)pageType {
     _pageType = pageType;
-    if (pageType==BGLoopBannerViewPageTypeLabel) {
-        self.pageCtl.hidden = YES;
-        self.pageLabel.hidden = NO;
-        self.detailIncationView.hidden = YES;
-    }else if (pageType==BGLoopBannerViewPageTypePageCtl) {
-        self.pageCtl.hidden = NO;
-        self.pageLabel.hidden = YES;
-        self.detailIncationView.hidden = YES;
-    }else if (pageType==BGLoopBannerViewPageTypeDetail) {
-        self.pageCtl.hidden = YES;
-        self.pageLabel.hidden = YES;
-        self.detailIncationView.hidden = NO;
-    }
+    [self setPicIndication];
+//    if (pageType==BGLoopBannerViewPageTypeLabel) {
+//        self.pageCtl.hidden = YES;
+//        self.pageLabel.hidden = NO;
+//        self.detailIncationView.hidden = YES;
+//        self.pageLabel.text = [NSString stringWithFormat:@"1/%ld",_itemArr.count];
+//    }else if (pageType==BGLoopBannerViewPageTypePageCtl) {
+//        self.pageCtl.hidden = NO;
+//        self.pageLabel.hidden = YES;
+//        self.detailIncationView.hidden = YES;
+//    }else if (pageType==BGLoopBannerViewPageTypeDetail) {
+//        self.pageCtl.hidden = YES;
+//        self.pageLabel.hidden = YES;
+//        self.detailIncationView.hidden = NO;
+//    }
 }
 
 #pragma mark-------设置基础属性,图片指示器
