@@ -1,28 +1,30 @@
 //
-//  HXBPOPRootView.m
+//  BGCommonPopRootView.m
 //  NingApartment
 //
 //  Created by 黄雄彪 on 17/5/15.
 //  Copyright © 2017年 sihan. All rights reserved.
 //
 
-#import "HXBPOPRootView.h"
+#import "BGCommonPopRootView.h"
 
-@implementation HXBPOPRootView
+@implementation BGCommonPopRootView
 
-+(HXBPOPRootView *)rootView {
++(BGCommonPopRootView *)rootView {
     
-    HXBPOPRootView *rootView = [[self alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    BGCommonPopRootView *rootView = [[self alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     [rootView addSubview:rootView.contentView];
     rootView.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:rootView action:@selector(dismss)];
-    [rootView addGestureRecognizer:tap];
     return rootView;
 
 }
 
 -(void)updateOrInitContentView:(id)data {
     
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self dismss];
 }
 
 -(void)show {

@@ -9,6 +9,7 @@
 #import "HXBTabbarControlle.h"
 #import "HXBNavigationController.h"
 #import "HWTabBar.h"
+#import "ViewController.h"
 
 
 @interface HXBTabbarControlle ()
@@ -41,8 +42,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIViewController *home = [UIViewController new];
-    [self addChildVc:home title:@"首页" imageName:@"tab_sy" selectImageName:@"tab_sy_pre"];
+    UIViewController *home = [ViewController new];
+    [self addChildVc:home title:@"demoView展示" imageName:@"tab_sy" selectImageName:@"tab_sy_pre"];
 //    ShareMainVC *service = [ShareMainVC new];
     UIViewController *service = [UIViewController new];
     [self addChildVc:service title:@"宁巢之家" imageName:@"tab_nczj" selectImageName:@"tab_nczj_pre"];
