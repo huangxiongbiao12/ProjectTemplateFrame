@@ -42,6 +42,12 @@
 		EE7599EC1EF25C8300CD3BEB /* CellArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7599E61EF25C8300CD3BEB /* CellArrow@2x.png */; };
 		EE7599ED1EF25C8300CD3BEB /* BGSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599E81EF25C8300CD3BEB /* BGSettingCell.m */; };
 		EE7599F01EF25DBC00CD3BEB /* BGSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599EF1EF25DBC00CD3BEB /* BGSettingVC.m */; };
+		EE7599F91EF2643700CD3BEB /* BGCommonFormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599F31EF2643700CD3BEB /* BGCommonFormVC.m */; };
+		EE7599FA1EF2643700CD3BEB /* BGCommonFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599F51EF2643700CD3BEB /* BGCommonFormModel.m */; };
+		EE7599FB1EF2643700CD3BEB /* BGCommonFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599F71EF2643700CD3BEB /* BGCommonFormCell.m */; };
+		EE7599FC1EF2643700CD3BEB /* BGCommonFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE7599F81EF2643700CD3BEB /* BGCommonFormCell.xib */; };
+		EE7599FF1EF2680C00CD3BEB /* BGCommonFormGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599FE1EF2680C00CD3BEB /* BGCommonFormGroup.m */; };
+		EE759A021EF2738400CD3BEB /* BGCommonFormDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE759A011EF2738400CD3BEB /* BGCommonFormDemoVC.m */; };
 		EEA5F6931EF0EF680043A8C8 /* NSData+BG_Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA5F65E1EF0EF680043A8C8 /* NSData+BG_Tool.m */; };
 		EEA5F6941EF0EF680043A8C8 /* NSDate+BG_Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA5F6601EF0EF680043A8C8 /* NSDate+BG_Tool.m */; };
 		EEA5F6951EF0EF680043A8C8 /* NSMutableDictionary+BG_Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA5F6621EF0EF680043A8C8 /* NSMutableDictionary+BG_Tool.m */; };
@@ -244,6 +250,17 @@
 		EE7599E81EF25C8300CD3BEB /* BGSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSettingCell.m; sourceTree = "<group>"; };
 		EE7599EE1EF25DBC00CD3BEB /* BGSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSettingVC.h; sourceTree = "<group>"; };
 		EE7599EF1EF25DBC00CD3BEB /* BGSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSettingVC.m; sourceTree = "<group>"; };
+		EE7599F21EF2643700CD3BEB /* BGCommonFormVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCommonFormVC.h; sourceTree = "<group>"; };
+		EE7599F31EF2643700CD3BEB /* BGCommonFormVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCommonFormVC.m; sourceTree = "<group>"; };
+		EE7599F41EF2643700CD3BEB /* BGCommonFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCommonFormModel.h; sourceTree = "<group>"; };
+		EE7599F51EF2643700CD3BEB /* BGCommonFormModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCommonFormModel.m; sourceTree = "<group>"; };
+		EE7599F61EF2643700CD3BEB /* BGCommonFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCommonFormCell.h; sourceTree = "<group>"; };
+		EE7599F71EF2643700CD3BEB /* BGCommonFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCommonFormCell.m; sourceTree = "<group>"; };
+		EE7599F81EF2643700CD3BEB /* BGCommonFormCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGCommonFormCell.xib; sourceTree = "<group>"; };
+		EE7599FD1EF2680C00CD3BEB /* BGCommonFormGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCommonFormGroup.h; sourceTree = "<group>"; };
+		EE7599FE1EF2680C00CD3BEB /* BGCommonFormGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCommonFormGroup.m; sourceTree = "<group>"; };
+		EE759A001EF2738400CD3BEB /* BGCommonFormDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCommonFormDemoVC.h; sourceTree = "<group>"; };
+		EE759A011EF2738400CD3BEB /* BGCommonFormDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCommonFormDemoVC.m; sourceTree = "<group>"; };
 		EEA5F65D1EF0EF680043A8C8 /* NSData+BG_Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+BG_Tool.h"; sourceTree = "<group>"; };
 		EEA5F65E1EF0EF680043A8C8 /* NSData+BG_Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+BG_Tool.m"; sourceTree = "<group>"; };
 		EEA5F65F1EF0EF680043A8C8 /* NSDate+BG_Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BG_Tool.h"; sourceTree = "<group>"; };
@@ -536,6 +553,8 @@
 				EE7599C71EF22DB900CD3BEB /* ShareCell.m */,
 				EE7599C81EF22DB900CD3BEB /* ShareItem.h */,
 				EE7599C91EF22DB900CD3BEB /* ShareItem.m */,
+				EE759A001EF2738400CD3BEB /* BGCommonFormDemoVC.h */,
+				EE759A011EF2738400CD3BEB /* BGCommonFormDemoVC.m */,
 			);
 			path = CustomViewDemo;
 			sourceTree = "<group>";
@@ -543,6 +562,7 @@
 		EE75995F1EF22C6400CD3BEB /* BGCustomView */ = {
 			isa = PBXGroup;
 			children = (
+				EE7599F11EF2642100CD3BEB /* BGCommonFormVC */,
 				EE7599DC1EF25C6E00CD3BEB /* BGBaseSettingVC */,
 				EE7599601EF22C6400CD3BEB /* BGAnimationBtn */,
 				EE7599631EF22C6400CD3BEB /* BGCommonButton */,
@@ -659,6 +679,22 @@
 				EE7599E81EF25C8300CD3BEB /* BGSettingCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EE7599F11EF2642100CD3BEB /* BGCommonFormVC */ = {
+			isa = PBXGroup;
+			children = (
+				EE7599F21EF2643700CD3BEB /* BGCommonFormVC.h */,
+				EE7599F31EF2643700CD3BEB /* BGCommonFormVC.m */,
+				EE7599FD1EF2680C00CD3BEB /* BGCommonFormGroup.h */,
+				EE7599FE1EF2680C00CD3BEB /* BGCommonFormGroup.m */,
+				EE7599F41EF2643700CD3BEB /* BGCommonFormModel.h */,
+				EE7599F51EF2643700CD3BEB /* BGCommonFormModel.m */,
+				EE7599F61EF2643700CD3BEB /* BGCommonFormCell.h */,
+				EE7599F71EF2643700CD3BEB /* BGCommonFormCell.m */,
+				EE7599F81EF2643700CD3BEB /* BGCommonFormCell.xib */,
+			);
+			path = BGCommonFormVC;
 			sourceTree = "<group>";
 		};
 		EEA5F65B1EF0EF680043A8C8 /* BGTools */ = {
@@ -1330,6 +1366,7 @@
 				EEDA4D371EE6B0DE0089E4F6 /* LoginVC.xib in Resources */,
 				EEDA4D861EE6B0DE0089E4F6 /* public.cer in Resources */,
 				EEDA4B911EE6B0A80089E4F6 /* Assets.xcassets in Resources */,
+				EE7599FC1EF2643700CD3BEB /* BGCommonFormCell.xib in Resources */,
 				EE7599D61EF22DB900CD3BEB /* img_ad_banner@2x.png in Resources */,
 				EEDA4D391EE6B0DE0089E4F6 /* RegisterVC.xib in Resources */,
 				EEDA4D441EE6B0DE0089E4F6 /* MBProgressHUD+BWMExtension.xcassets in Resources */,
@@ -1372,6 +1409,7 @@
 				EEA5F6A41EF0EF680043A8C8 /* SearchManager.m in Sources */,
 				EEDA4D611EE6B0DE0089E4F6 /* SDWebImageDownloader.m in Sources */,
 				EEA5F6A11EF0EF680043A8C8 /* LocationGeocoder.m in Sources */,
+				EE7599F91EF2643700CD3BEB /* BGCommonFormVC.m in Sources */,
 				EEA5F6B61EF0EF880043A8C8 /* BGNetStatusChecker.m in Sources */,
 				EEDA4D581EE6B0DE0089E4F6 /* UIScrollView+MJExtension.m in Sources */,
 				EEDA4D471EE6B0DE0089E4F6 /* MJRefreshAutoFooter.m in Sources */,
@@ -1464,10 +1502,12 @@
 				EEDA4D741EE6B0DE0089E4F6 /* TZPhotoPickerController.m in Sources */,
 				EEDA4D4C1EE6B0DE0089E4F6 /* MJRefreshAutoGifFooter.m in Sources */,
 				EEDA4D4A1EE6B0DE0089E4F6 /* MJRefreshFooter.m in Sources */,
+				EE759A021EF2738400CD3BEB /* BGCommonFormDemoVC.m in Sources */,
 				EEDA4D421EE6B0DE0089E4F6 /* MBProgressHUD.m in Sources */,
 				EEDA4D511EE6B0DE0089E4F6 /* MJRefreshBackStateFooter.m in Sources */,
 				EEA5F6A21EF0EF680043A8C8 /* LocationManager.m in Sources */,
 				EE7599ED1EF25C8300CD3BEB /* BGSettingCell.m in Sources */,
+				EE7599FF1EF2680C00CD3BEB /* BGCommonFormGroup.m in Sources */,
 				EE75998A1EF22C6400CD3BEB /* BGLoopBannerView.m in Sources */,
 				EEDA4D3C1EE6B0DE0089E4F6 /* AFSecurityPolicy.m in Sources */,
 				EEDA4D7B1EE6B0DE0089E4F6 /* HXBSearchBar.m in Sources */,
@@ -1484,7 +1524,9 @@
 				EEDA4D6D1EE6B0DE0089E4F6 /* ShowImageCollectionView.m in Sources */,
 				EE7599D11EF22DB900CD3BEB /* BGCommonButtonVC.m in Sources */,
 				EEDA4D331EE6B0DE0089E4F6 /* HXBAppIntroduceVC.m in Sources */,
+				EE7599FA1EF2643700CD3BEB /* BGCommonFormModel.m in Sources */,
 				EEDA4D691EE6B0DE0089E4F6 /* UIImageView+WebCache.m in Sources */,
+				EE7599FB1EF2643700CD3BEB /* BGCommonFormCell.m in Sources */,
 				EEDA4D6B1EE6B0DE0089E4F6 /* UIView+WebCacheOperation.m in Sources */,
 				EEDA4D431EE6B0DE0089E4F6 /* MBProgressHUD+BWMExtension.m in Sources */,
 				EEDA4D6E1EE6B0DE0089E4F6 /* TZTestCell.m in Sources */,

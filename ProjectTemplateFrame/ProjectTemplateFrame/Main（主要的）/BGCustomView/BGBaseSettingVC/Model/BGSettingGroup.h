@@ -15,6 +15,6 @@
 
 @property(nonatomic,copy)NSString *footterStr;
 
-@property(nonatomic,strong)NSMutableArray *items;
+@property(nonatomic,strong)NSMutableArray <BGSettingItem*>*items;
 
 @end

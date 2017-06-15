@@ -14,4 +14,8 @@
 -(void)setHighlightDefaultColor;
 -(void)setHighlightColor:(UIColor *)color;
 
+//根据标题适配高度
+-(double)fitHeightForTitle;
+-(double)fitWidthForTitle;
+
 @end

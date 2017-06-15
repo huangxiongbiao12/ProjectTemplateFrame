@@ -31,4 +31,16 @@
     return img;
 }
 
+-(double)fitHeightForTitle {
+    self.titleLabel.numberOfLines = 0;
+    self.height = [self.titleLabel.text boundingRectWithSize:CGSizeMake(self.width, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil].size.height+15;
+    return [self.titleLabel.text boundingRectWithSize:CGSizeMake(self.width, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil].size.height;
+}
+
+-(double)fitWidthForTitle {
+    self.titleLabel.numberOfLines = 0;
+    self.width = [self.titleLabel.text boundingRectWithSize:CGSizeMake(10000, self.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil].size.width+20;
+    return [self.titleLabel.text boundingRectWithSize:CGSizeMake(10000, self.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil].size.width;
+}
+
 @end

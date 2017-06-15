@@ -27,8 +27,8 @@
 }
 
 -(void)initData {
-    _dataArr = @[@"BGAnimationBtn展示",@"BGCommonButton展示",@"BGCommonPopView展示",@"BGLoadingHUD展示",@"BGLoopBannerView展示",@"BGMenuVCScrollerView展示",@"BGSettingVC展示"];
-    _vcArr = @[@"SimpleAnimationButtomVC",@"BGCommonButtonVC",@"BGPopDemoVC",@"BGLoadingHUDVC",@"BGLoopBannerViewVC",@"BGMenuScrollerVC",@"BGSettingVC"];
+    _dataArr = @[@"BGAnimationBtn展示",@"BGCommonButton展示",@"BGCommonPopView展示",@"BGLoadingHUD展示",@"BGLoopBannerView展示",@"BGMenuVCScrollerView展示",@"BGSettingVC展示",@"BGCommonFormDemoVC"];
+    _vcArr = @[@"SimpleAnimationButtomVC",@"BGCommonButtonVC",@"BGPopDemoVC",@"BGLoadingHUDVC",@"BGLoopBannerViewVC",@"BGMenuScrollerVC",@"BGSettingVC",@"BGCommonFormDemoVC"];
 }
 
 #pragma mark-------
