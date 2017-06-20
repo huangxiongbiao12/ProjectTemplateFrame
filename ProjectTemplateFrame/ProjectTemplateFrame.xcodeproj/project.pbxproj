@@ -48,6 +48,7 @@
 		EE7599FC1EF2643700CD3BEB /* BGCommonFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE7599F81EF2643700CD3BEB /* BGCommonFormCell.xib */; };
 		EE7599FF1EF2680C00CD3BEB /* BGCommonFormGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599FE1EF2680C00CD3BEB /* BGCommonFormGroup.m */; };
 		EE759A021EF2738400CD3BEB /* BGCommonFormDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EE759A011EF2738400CD3BEB /* BGCommonFormDemoVC.m */; };
+		EE8BFDC21EF8F633000D5618 /* UIViewController+BG_Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8BFDC11EF8F633000D5618 /* UIViewController+BG_Tool.m */; };
 		EEA5F6931EF0EF680043A8C8 /* NSData+BG_Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA5F65E1EF0EF680043A8C8 /* NSData+BG_Tool.m */; };
 		EEA5F6941EF0EF680043A8C8 /* NSDate+BG_Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA5F6601EF0EF680043A8C8 /* NSDate+BG_Tool.m */; };
 		EEA5F6951EF0EF680043A8C8 /* NSMutableDictionary+BG_Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA5F6621EF0EF680043A8C8 /* NSMutableDictionary+BG_Tool.m */; };
@@ -261,6 +262,8 @@
 		EE7599FE1EF2680C00CD3BEB /* BGCommonFormGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCommonFormGroup.m; sourceTree = "<group>"; };
 		EE759A001EF2738400CD3BEB /* BGCommonFormDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCommonFormDemoVC.h; sourceTree = "<group>"; };
 		EE759A011EF2738400CD3BEB /* BGCommonFormDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCommonFormDemoVC.m; sourceTree = "<group>"; };
+		EE8BFDC01EF8F633000D5618 /* UIViewController+BG_Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BG_Tool.h"; sourceTree = "<group>"; };
+		EE8BFDC11EF8F633000D5618 /* UIViewController+BG_Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BG_Tool.m"; sourceTree = "<group>"; };
 		EEA5F65D1EF0EF680043A8C8 /* NSData+BG_Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+BG_Tool.h"; sourceTree = "<group>"; };
 		EEA5F65E1EF0EF680043A8C8 /* NSData+BG_Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+BG_Tool.m"; sourceTree = "<group>"; };
 		EEA5F65F1EF0EF680043A8C8 /* NSDate+BG_Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BG_Tool.h"; sourceTree = "<group>"; };
@@ -700,10 +703,10 @@
 		EEA5F65B1EF0EF680043A8C8 /* BGTools */ = {
 			isa = PBXGroup;
 			children = (
+				EE55F96D1EF0F20F005E1D06 /* BGToolsHeader.h */,
 				EEA5F65C1EF0EF680043A8C8 /* CategoryToos */,
 				EEA5F6771EF0EF680043A8C8 /* LocationTool */,
 				EEA5F6821EF0EF680043A8C8 /* MangerTools */,
-				EE55F96D1EF0F20F005E1D06 /* BGToolsHeader.h */,
 			);
 			path = BGTools;
 			sourceTree = "<group>";
@@ -737,6 +740,8 @@
 				EEA5F6741EF0EF680043A8C8 /* UITextField+BG_Tool.m */,
 				EEA5F6751EF0EF680043A8C8 /* UIView+BG_Tool.h */,
 				EEA5F6761EF0EF680043A8C8 /* UIView+BG_Tool.m */,
+				EE8BFDC01EF8F633000D5618 /* UIViewController+BG_Tool.h */,
+				EE8BFDC11EF8F633000D5618 /* UIViewController+BG_Tool.m */,
 			);
 			path = CategoryToos;
 			sourceTree = "<group>";
@@ -1424,6 +1429,7 @@
 				EEA5F6941EF0EF680043A8C8 /* NSDate+BG_Tool.m in Sources */,
 				EEDA4D6A1EE6B0DE0089E4F6 /* UIView+WebCache.m in Sources */,
 				EEDA4D601EE6B0DE0089E4F6 /* SDWebImageDecoder.m in Sources */,
+				EE8BFDC21EF8F633000D5618 /* UIViewController+BG_Tool.m in Sources */,
 				EEA5F6A01EF0EF680043A8C8 /* BGLocationConverter.m in Sources */,
 				EEDA4D3E1EE6B0DE0089E4F6 /* AFURLResponseSerialization.m in Sources */,
 				EEA5F6991EF0EF680043A8C8 /* UIImage+BG_Tool.m in Sources */,

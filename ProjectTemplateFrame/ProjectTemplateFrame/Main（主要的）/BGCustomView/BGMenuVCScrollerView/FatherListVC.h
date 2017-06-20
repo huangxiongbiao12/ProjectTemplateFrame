@@ -20,6 +20,8 @@
 }
 @property (assign, nonatomic)NSInteger page; //!< 数据页数.表示下次请求第几页的数据.
 @property(nonatomic,strong)UITableView *tableView;//列表
+@property(nonatomic,assign,getter=isCellNIB)BOOL isCellNIB;//默认为yes 需要在init内设置
+@property(nonatomic,copy)NSString *cellClass;//cell class 需要在init方法内设置
 @property(nonatomic,strong)NSMutableArray *dataArr;//列表数据元
 @property(nonatomic,assign)BOOL isSetRefresh;//是否设置刷新分页,默认又刷新分页
 -(void)setBackgroundImageName:(NSString*)imageName tips:(NSString*)tips;//设置背景及名称

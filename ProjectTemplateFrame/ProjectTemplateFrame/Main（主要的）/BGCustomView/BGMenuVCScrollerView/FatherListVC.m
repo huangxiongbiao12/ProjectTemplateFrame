@@ -24,6 +24,8 @@
         _dataArr = [NSMutableArray array];
         self.page = 1;
         self.isSetRefresh = YES;
+        _isCellNIB = YES;
+        _cellClass = @"UITableViewCell";
     }
     return self;
 }
@@ -49,8 +51,18 @@
             [self updateData];
         }];       
     }
+    if (_cellClass.length&&NSClassFromString(_cellClass)) {
+        if (_isCellNIB) {
+            [_tableView registerNib:[UINib nibWithNibName:_cellClass bundle:nil] forCellReuseIdentifier:_cellClass];
+        }else {
+            [_tableView registerClass:NSClassFromString(_cellClass) forCellReuseIdentifier:_cellClass];
+        }
+    }
     [self.tableView reloadData];
 }
+
+
+
 #pragma mark-------似有方法
 
 -(void)setBackgroundImageName:(NSString *)imageName tips:(NSString *)tips
@@ -129,6 +141,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -137,7 +150,8 @@
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_cellClass];
+    return cell;
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
