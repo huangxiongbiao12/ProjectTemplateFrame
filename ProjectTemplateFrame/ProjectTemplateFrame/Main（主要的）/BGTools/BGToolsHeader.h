@@ -22,6 +22,7 @@
 #import "UIButton+BG_Tool.h"
 #import "UITextField+BG_Tool.h"
 #import "UIResponder+BG_Tool.h"
+#import "UIViewController+BG_Tool.h"
 
 
 #import "BGSaveTool.h"

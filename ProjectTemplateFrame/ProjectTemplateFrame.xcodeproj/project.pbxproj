@@ -168,6 +168,7 @@
 		EEDA4D811EE6B0DE0089E4F6 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA4C771EE6B0DE0089E4F6 /* UserModel.m */; };
 		EEDA4D861EE6B0DE0089E4F6 /* public.cer in Resources */ = {isa = PBXBuildFile; fileRef = EEDA4C811EE6B0DE0089E4F6 /* public.cer */; };
 		EEDA4DA41EE6B0DE0089E4F6 /* HWTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA4CB61EE6B0DE0089E4F6 /* HWTabBar.m */; };
+		EEE7ABAC1EFBBFF80051062A /* BGBanBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE7ABAB1EFBBFF80051062A /* BGBanBackViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -500,6 +501,8 @@
 		EEDA4C811EE6B0DE0089E4F6 /* public.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = public.cer; sourceTree = "<group>"; };
 		EEDA4CB51EE6B0DE0089E4F6 /* HWTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTabBar.h; sourceTree = "<group>"; };
 		EEDA4CB61EE6B0DE0089E4F6 /* HWTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTabBar.m; sourceTree = "<group>"; };
+		EEE7ABAA1EFBBFF80051062A /* BGBanBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGBanBackViewController.h; sourceTree = "<group>"; };
+		EEE7ABAB1EFBBFF80051062A /* BGBanBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGBanBackViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -782,6 +785,8 @@
 				EEA5F6901EF0EF680043A8C8 /* UUID.m */,
 				EEA5F6911EF0EF680043A8C8 /* ZLAlertView.h */,
 				EEA5F6921EF0EF680043A8C8 /* ZLAlertView.m */,
+				EEE7ABAA1EFBBFF80051062A /* BGBanBackViewController.h */,
+				EEE7ABAB1EFBBFF80051062A /* BGBanBackViewController.m */,
 			);
 			path = MangerTools;
 			sourceTree = "<group>";
@@ -1460,6 +1465,7 @@
 				EEDA4D6F1EE6B0DE0089E4F6 /* TZAssetCell.m in Sources */,
 				EEA5F6931EF0EF680043A8C8 /* NSData+BG_Tool.m in Sources */,
 				EEDA4B861EE6B0A80089E4F6 /* main.m in Sources */,
+				EEE7ABAC1EFBBFF80051062A /* BGBanBackViewController.m in Sources */,
 				EE7599831EF22C6400CD3BEB /* BGCommonPopRootView.m in Sources */,
 				EEDA4D3F1EE6B0DE0089E4F6 /* AFURLSessionManager.m in Sources */,
 				EEA5F6B51EF0EF880043A8C8 /* BGBaseModel.m in Sources */,
