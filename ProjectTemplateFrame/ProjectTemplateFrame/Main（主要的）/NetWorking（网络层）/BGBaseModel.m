@@ -43,6 +43,10 @@
 }
 
 -(void)setValuesForKeysWithDictionary:(NSDictionary<NSString *,id> *)keyedValues {
+    if ([keyedValues isKindOfClass:[NSDictionary class]]) {
+        DDLog(@"keyedValues==出错");
+        return;
+    }
     for (NSString *key in keyedValues) {
         id value = keyedValues[key];
         //对象中含有对象数组
