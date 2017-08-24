@@ -56,7 +56,7 @@
                 continue;
             }
             //设置数组的值
-            NSMutableArray *values = [NSMutableArray new];
+            NSMutableArray *values = [self valueForKey:key];
             //取出数组含有对象类型
             Class ObjectType = NSClassFromString(self.classInArrayDic[key]);
             DDLog(@"%@",ObjectType);
