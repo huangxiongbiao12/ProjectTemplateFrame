@@ -52,4 +52,19 @@
     return _contentView;
 }
 
+-(void)setDatePickerMode:(UIDatePickerMode)datePickerMode {
+    _daraPicker.datePickerMode = datePickerMode;
+}
+
+-(void)setMaximumDate:(NSDate *)maximumDate {
+    _maximumDate = maximumDate;
+    _daraPicker.maximumDate= maximumDate;
+}
+
+-(void)setMinimumDate:(NSDate *)minimumDate {
+    _minimumDate = minimumDate;
+    _daraPicker.minimumDate= minimumDate;
+}
+
+
 @end
