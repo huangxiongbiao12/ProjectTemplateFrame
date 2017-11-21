@@ -51,4 +51,13 @@
 
 + (NSString *)md5:(NSString *)str;
 
+//加密
+- (NSString *) AES256_Encrypt:(NSString *)key;
+//解密
+- (NSString *) AES256_Decrypt:(NSString *)key;
+
++ (NSString*) AES128Encrypt:(NSString *)plainText key:(NSString*)key;
+
++ (NSString*) AES128Decrypt:(NSString *)encryptText key:(NSString*)key;
+
 @end

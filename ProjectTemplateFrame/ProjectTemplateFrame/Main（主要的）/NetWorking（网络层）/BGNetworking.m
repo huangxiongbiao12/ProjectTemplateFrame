@@ -11,6 +11,10 @@
 #import "MBProgressHUD+MJ.h"
 #import "UIView+BG_Tool.h"
 #import "DefineHeader.h"
+#import "SecurityConf.h"
+#import "BGTokenManager.h"
+#import "RSAEncryptor.h"
+
 /**
  *  是否开启https SSL 验证
  *
@@ -28,6 +32,8 @@ typedef NS_ENUM(NSInteger,HttpType) {
 };
 
 static int timeOut = 30;
+static NSString *TOKNE_HEADER = @"t_o_k_e_n";
+static NSString *AES_RANDOM_KEY = @"RandomAESKey";
 
 @interface BGNetworking ()
 {
@@ -41,95 +47,85 @@ static int timeOut = 30;
 
 @implementation BGNetworking
 
-+(void)getUrl:(NSString*)url parameters:(NSDictionary*)parameters success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure
-{
-    [[BGNetStatusChecker shareNetStatus] checkNetStatus];
-    AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
-;
-    manager.requestSerializer.timeoutInterval = timeOut;
-    // 加上这行代码，https ssl 验证。
-    if(openHttpsSSL)
-    {
-        [manager setSecurityPolicy:[self customSecurityPolicy]];
-    }
-    [MBProgressHUD showMessage:@"加载中..."];
-     DDLog(@"parameters:%@",parameters);
-    [manager GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        DDLog(@"====%@,%@==url:%@",responseObject,parameters,url);
-        [MBProgressHUD hideHUD];
-        //登陆成功===================================
-        if ([responseObject[@"status"] isEqualToNumber:@500]) {
-            [MBProgressHUD showSuccess:@"加载成功"];
-            if (success) {
-                success(responseObject);
-            }
-        }else{//登陆失败=============================
-            if ([responseObject[@"data"] isKindOfClass:[NSString class]]) {
-                [MBProgressHUD showError:responseObject[@"data"]];
-            }else{
-                [MBProgressHUD showError:@"信息错误"];
-            }
-            NSError *error1;
-            failure(error1);
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        //         [[NetWorkingStausTipLabel shareNetWorkingStausTipLabel] showDuration:2.0];
-        [MBProgressHUD hideHUD];
-        [MBProgressHUD showError:@"网络异常"];
-        DDLog(@"%s==error--%@",__func__,error);
-        if (error) {
-            failure(error);
-        }
-
-    }];
-}
-
-+(void)getNoHUDUrl:(NSString*)url parameters:(NSDictionary*)parameters success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
-    [[BGNetStatusChecker shareNetStatus] checkNetStatus];
-    AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
-;
-    manager.requestSerializer.timeoutInterval = timeOut;
-    // 加上这行代码，https ssl 验证。
-    if(openHttpsSSL)
-    {
-        [manager setSecurityPolicy:[self customSecurityPolicy]];
-    }
-    DDLog(@"parameters:%@",parameters);
-    [manager GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        DDLog(@"====%@,%@==url:%@",responseObject,parameters,url);
-         [MBProgressHUD hideHUD];
-        //登陆成功===================================
-        if ([responseObject[@"status"] isEqualToNumber:@500]) {
-            if (success) {
-                success(responseObject);
-            }
-        }else{//登陆失败=============================
-            if ([responseObject[@"data"] isKindOfClass:[NSString class]]) {
-                [MBProgressHUD showError:responseObject[@"data"]];
-            }else{
-                [MBProgressHUD showError:@"信息错误"];
-            }
-            NSError *error1;
-            failure(error1);
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        //         [[NetWorkingStausTipLabel shareNetWorkingStausTipLabel] showDuration:2.0];
-        DDLog(@"%s==error--%@",__func__,error);
-        [MBProgressHUD hideHUD];
-        [MBProgressHUD showError:@"网络异常"];
-        if (error) {
-            failure(error);
-        }
-        
-    }];
-}
-
 #pragma mark-------封装请求
+
 +(void)postUrl:(NSString*)url parameters:(NSDictionary*)parameters showHUD:(BOOL)show success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
+    [[BGNetStatusChecker shareNetStatus] checkNetStatus];
+    AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
+    ;
+    manager.requestSerializer.timeoutInterval = timeOut;
+    
+    [[BGTokenManager shareTokenManager] getToken:^{
+        //将token封装入请求头
+        if ([BGSaveTool objectForKey:kToken]) {
+            [manager.requestSerializer setValue:[BGSaveTool objectForKey:kToken] forHTTPHeaderField:TOKNE_HEADER];
+        }
+        NSString *random = [RSAEncryptor encryptString:@"1234567812345678" publicKey:RSA_PUBLIC_KEY];
+         [manager.requestSerializer setValue:random forHTTPHeaderField:AES_RANDOM_KEY];
+        // 加上这行代码，https ssl 验证。
+        if(openHttpsSSL)
+        {
+            [manager setSecurityPolicy:[self customSecurityPolicy]];
+        }
+        if (show) {
+            [MBProgressHUD showMessage:@"加载中..."];
+        }
+        DDLog(@"parameters:%@==url:%@==",parameters,url);
+        
+        [manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            DDLog(@"====%@,%@==url:%@===parameters:%@",responseObject,responseObject[@"data"],url,parameters);
+            if (show) {
+                [MBProgressHUD hideHUD];
+            }
+            //登陆成功===================================
+            if ([responseObject[@"status"] isEqualToNumber:@500]) {
+                if ([responseObject[@"data"] isKindOfClass:[NSArray class]]) {
+                    if ([responseObject[@"data"] count] < 1) {
+                        //                    [MBProgressHUD showSuccess:@"没有更多数据"];
+                    }else{
+                        if (show) {
+                            //                        [MBProgressHUD showSuccess:@"加载成功"];
+                        }
+                    }
+                }else{
+                    if (show) {
+                        //                    [MBProgressHUD showSuccess:@"加载成功"];
+                    }
+                }
+                if (success) {
+                    success(responseObject);
+                }
+            }else{//登陆失败=============================
+                if ([responseObject[@"data"] isKindOfClass:[NSString class]]) {
+                    //                if (show) {
+                    [MBProgressHUD showError:responseObject[@"data"]];
+                    //                }
+                }else{
+                    //                if (show) {
+                    [MBProgressHUD showError:@"信息错误"];
+                    //                }
+                }
+                NSError *error1;
+                failure(error1);
+            }
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            //         [[NetWorkingStausTipLabel shareNetWorkingStausTipLabel] showDuration:2.0];
+            if (show) {
+                [MBProgressHUD hideHUD];
+            }
+            //        [MBProgressHUD showError:@"请求失败"];
+            DDLog(@"%s==error--%@",__func__,error);
+            if (error) {
+                failure(error);
+            }
+        }];
+    }];
+}
+
++(void)postNoTokenUrl:(NSString*)url parameters:(NSDictionary*)parameters showHUD:(BOOL)show success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
     [[BGNetStatusChecker shareNetStatus] checkNetStatus];
     AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
 ;
@@ -207,6 +203,94 @@ static int timeOut = 30;
     [self postUrl:url parameters:parameters showHUD:NO success:success failure:failure];
 }
 
+#pragma mark-------get
+
++(void)getUrl:(NSString*)url parameters:(NSDictionary*)parameters success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure
+{
+    [[BGNetStatusChecker shareNetStatus] checkNetStatus];
+    AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
+    ;
+    manager.requestSerializer.timeoutInterval = timeOut;
+    // 加上这行代码，https ssl 验证。
+    if(openHttpsSSL)
+    {
+        [manager setSecurityPolicy:[self customSecurityPolicy]];
+    }
+    [MBProgressHUD showMessage:@"加载中..."];
+    DDLog(@"parameters:%@",parameters);
+    [manager GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DDLog(@"====%@,%@==url:%@",responseObject,parameters,url);
+        [MBProgressHUD hideHUD];
+        //登陆成功===================================
+        if ([responseObject[@"status"] isEqualToNumber:@500]) {
+            [MBProgressHUD showSuccess:@"加载成功"];
+            if (success) {
+                success(responseObject);
+            }
+        }else{//登陆失败=============================
+            if ([responseObject[@"data"] isKindOfClass:[NSString class]]) {
+                [MBProgressHUD showError:responseObject[@"data"]];
+            }else{
+                [MBProgressHUD showError:@"信息错误"];
+            }
+            NSError *error1;
+            failure(error1);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //         [[NetWorkingStausTipLabel shareNetWorkingStausTipLabel] showDuration:2.0];
+        [MBProgressHUD hideHUD];
+        [MBProgressHUD showError:@"网络异常"];
+        DDLog(@"%s==error--%@",__func__,error);
+        if (error) {
+            failure(error);
+        }
+        
+    }];
+}
+
++(void)getNoHUDUrl:(NSString*)url parameters:(NSDictionary*)parameters success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
+    [[BGNetStatusChecker shareNetStatus] checkNetStatus];
+    AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
+    ;
+    manager.requestSerializer.timeoutInterval = timeOut;
+    // 加上这行代码，https ssl 验证。
+    if(openHttpsSSL)
+    {
+        [manager setSecurityPolicy:[self customSecurityPolicy]];
+    }
+    DDLog(@"parameters:%@",parameters);
+    [manager GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DDLog(@"====%@,%@==url:%@",responseObject,parameters,url);
+        [MBProgressHUD hideHUD];
+        //登陆成功===================================
+        if ([responseObject[@"status"] isEqualToNumber:@500]) {
+            if (success) {
+                success(responseObject);
+            }
+        }else{//登陆失败=============================
+            if ([responseObject[@"data"] isKindOfClass:[NSString class]]) {
+                [MBProgressHUD showError:responseObject[@"data"]];
+            }else{
+                [MBProgressHUD showError:@"信息错误"];
+            }
+            NSError *error1;
+            failure(error1);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //         [[NetWorkingStausTipLabel shareNetWorkingStausTipLabel] showDuration:2.0];
+        DDLog(@"%s==error--%@",__func__,error);
+        [MBProgressHUD hideHUD];
+        [MBProgressHUD showError:@"网络异常"];
+        if (error) {
+            failure(error);
+        }
+        
+    }];
+}
 
 #pragma mark-------上传图片
 

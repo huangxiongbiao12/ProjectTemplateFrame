@@ -31,4 +31,13 @@
 //  data转成16进制字符串（0X11）一个字节
 +(NSString*)hexStringWithData:(NSData*)data;
 
+//加密
+- (NSData *) AES256_Encrypt:(NSString *)key;
+//解密
+- (NSData *) AES256_Decrypt:(NSString *)key;
+//追加64编码
+- (NSString *)newStringInBase64FromData;
+//同上64编码
++ (NSString*)base64encode:(NSString*)str;
+
 @end

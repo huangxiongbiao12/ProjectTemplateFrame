@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE3D3AC91FC418C90089C3AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3D3AC81FC418B80089C3AC /* Security.framework */; };
+		EE3D3ACD1FC419D60089C3AC /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3D3ACC1FC419D60089C3AC /* RSAEncryptor.m */; };
+		EE3D3AD11FC41C620089C3AC /* security.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE3D3AD01FC41C620089C3AC /* security.plist */; };
+		EE3D3AD41FC41C7A0089C3AC /* RandomKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3D3AD31FC41C7A0089C3AC /* RandomKeyManager.m */; };
+		EE3D3AD71FC41CC50089C3AC /* EncryChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3D3AD61FC41CC50089C3AC /* EncryChecker.m */; };
+		EE3D3ADA1FC41FC80089C3AC /* BGTokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3D3AD91FC41FC80089C3AC /* BGTokenManager.m */; };
 		EE728E081EE7E6FB00DB0516 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EE728E071EE7E6FB00DB0516 /* AFAppDotNetAPIClient.m */; };
 		EE7599801EF22C6400CD3BEB /* BGOpenDoorBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599621EF22C6400CD3BEB /* BGOpenDoorBtn.m */; };
 		EE7599811EF22C6400CD3BEB /* BGCommonButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7599651EF22C6400CD3BEB /* BGCommonButton.m */; };
@@ -189,6 +195,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE3D3AC81FC418B80089C3AC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EE3D3ACB1FC419D60089C3AC /* RSAEncryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
+		EE3D3ACC1FC419D60089C3AC /* RSAEncryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptor.m; sourceTree = "<group>"; };
+		EE3D3ACF1FC41BBA0089C3AC /* SecurityConf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecurityConf.h; sourceTree = "<group>"; };
+		EE3D3AD01FC41C620089C3AC /* security.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = security.plist; sourceTree = "<group>"; };
+		EE3D3AD21FC41C7A0089C3AC /* RandomKeyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomKeyManager.h; sourceTree = "<group>"; };
+		EE3D3AD31FC41C7A0089C3AC /* RandomKeyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomKeyManager.m; sourceTree = "<group>"; };
+		EE3D3AD51FC41CC50089C3AC /* EncryChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryChecker.h; sourceTree = "<group>"; };
+		EE3D3AD61FC41CC50089C3AC /* EncryChecker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryChecker.m; sourceTree = "<group>"; };
+		EE3D3AD81FC41FC70089C3AC /* BGTokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGTokenManager.h; sourceTree = "<group>"; };
+		EE3D3AD91FC41FC80089C3AC /* BGTokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGTokenManager.m; sourceTree = "<group>"; };
 		EE55F96D1EF0F20F005E1D06 /* BGToolsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGToolsHeader.h; sourceTree = "<group>"; };
 		EE728E061EE7E6FB00DB0516 /* AFAppDotNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAppDotNetAPIClient.h; sourceTree = "<group>"; };
 		EE728E071EE7E6FB00DB0516 /* AFAppDotNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAppDotNetAPIClient.m; sourceTree = "<group>"; };
@@ -510,6 +527,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3D3AC91FC418C90089C3AC /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +548,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE3D3AC71FC418B70089C3AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE3D3AC81FC418B80089C3AC /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE3D3ACA1FC4199A0089C3AC /* UtilTools */ = {
+			isa = PBXGroup;
+			children = (
+				EE3D3ACB1FC419D60089C3AC /* RSAEncryptor.h */,
+				EE3D3ACC1FC419D60089C3AC /* RSAEncryptor.m */,
+			);
+			path = UtilTools;
+			sourceTree = "<group>";
+		};
+		EE3D3ACE1FC41B900089C3AC /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				EE3D3ACF1FC41BBA0089C3AC /* SecurityConf.h */,
+				EE3D3AD01FC41C620089C3AC /* security.plist */,
+				EE3D3AD21FC41C7A0089C3AC /* RandomKeyManager.h */,
+				EE3D3AD31FC41C7A0089C3AC /* RandomKeyManager.m */,
+				EE3D3AD51FC41CC50089C3AC /* EncryChecker.h */,
+				EE3D3AD61FC41CC50089C3AC /* EncryChecker.m */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
 		EE75995E1EF22C3A00CD3BEB /* CustomViewDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -707,6 +755,7 @@
 			isa = PBXGroup;
 			children = (
 				EE55F96D1EF0F20F005E1D06 /* BGToolsHeader.h */,
+				EE3D3ACA1FC4199A0089C3AC /* UtilTools */,
 				EEA5F65C1EF0EF680043A8C8 /* CategoryToos */,
 				EEA5F6771EF0EF680043A8C8 /* LocationTool */,
 				EEA5F6821EF0EF680043A8C8 /* MangerTools */,
@@ -798,6 +847,7 @@
 				EEDA4B9D1EE6B0A80089E4F6 /* ProjectTemplateFrameTests */,
 				EEDA4BA81EE6B0A80089E4F6 /* ProjectTemplateFrameUITests */,
 				EEDA4B821EE6B0A80089E4F6 /* Products */,
+				EE3D3AC71FC418B70089C3AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1226,12 +1276,15 @@
 		EEDA4C781EE6B0DE0089E4F6 /* BGNetWorking */ = {
 			isa = PBXGroup;
 			children = (
+				EE3D3ACE1FC41B900089C3AC /* Security */,
 				EEA5F6AD1EF0EF880043A8C8 /* BGBaseModel.h */,
 				EEA5F6AE1EF0EF880043A8C8 /* BGBaseModel.m */,
 				EEA5F6AF1EF0EF880043A8C8 /* BGNetStatusChecker.h */,
 				EEA5F6B01EF0EF880043A8C8 /* BGNetStatusChecker.m */,
 				EEA5F6B11EF0EF880043A8C8 /* BGNetworking.h */,
 				EEA5F6B21EF0EF880043A8C8 /* BGNetworking.m */,
+				EE3D3AD81FC41FC70089C3AC /* BGTokenManager.h */,
+				EE3D3AD91FC41FC80089C3AC /* BGTokenManager.m */,
 				EEA5F6B31EF0EF880043A8C8 /* NSObject+BGNetworking.h */,
 				EEA5F6B41EF0EF880043A8C8 /* NSObject+BGNetworking.m */,
 				EE728E061EE7E6FB00DB0516 /* AFAppDotNetAPIClient.h */,
@@ -1380,6 +1433,7 @@
 				EE7599D61EF22DB900CD3BEB /* img_ad_banner@2x.png in Resources */,
 				EEDA4D391EE6B0DE0089E4F6 /* RegisterVC.xib in Resources */,
 				EEDA4D441EE6B0DE0089E4F6 /* MBProgressHUD+BWMExtension.xcassets in Resources */,
+				EE3D3AD11FC41C620089C3AC /* security.plist in Resources */,
 				EEDA4D721EE6B0DE0089E4F6 /* TZImagePickerController.bundle in Resources */,
 				EE7599CE1EF22DB900CD3BEB /* 1.jpeg in Resources */,
 				EE7599CF1EF22DB900CD3BEB /* 2.jpeg in Resources */,
@@ -1448,6 +1502,7 @@
 				EEA5F6971EF0EF680043A8C8 /* UIBarButtonItem+BG_Tool.m in Sources */,
 				EEDA4D591EE6B0DE0089E4F6 /* UIScrollView+MJRefresh.m in Sources */,
 				EEDA4D3D1EE6B0DE0089E4F6 /* AFURLRequestSerialization.m in Sources */,
+				EE3D3AD71FC41CC50089C3AC /* EncryChecker.m in Sources */,
 				EE7599D21EF22DB900CD3BEB /* BGLoadingHUDVC.m in Sources */,
 				EEA5F6A81EF0EF680043A8C8 /* BGSaveTool.m in Sources */,
 				EEDA4D5D1EE6B0DE0089E4F6 /* SDImageCache.m in Sources */,
@@ -1455,6 +1510,7 @@
 				EEA5F6A31EF0EF680043A8C8 /* LocationTool.m in Sources */,
 				EEDA4D5C1EE6B0DE0089E4F6 /* NSImage+WebCache.m in Sources */,
 				EEDA4D4F1EE6B0DE0089E4F6 /* MJRefreshBackGifFooter.m in Sources */,
+				EE3D3AD41FC41C7A0089C3AC /* RandomKeyManager.m in Sources */,
 				EE728E081EE7E6FB00DB0516 /* AFAppDotNetAPIClient.m in Sources */,
 				EEDA4DA41EE6B0DE0089E4F6 /* HWTabBar.m in Sources */,
 				EEDA4D3A1EE6B0DE0089E4F6 /* AFHTTPSessionManager.m in Sources */,
@@ -1496,6 +1552,7 @@
 				EEDA4D631EE6B0DE0089E4F6 /* SDWebImageManager.m in Sources */,
 				EE7599D91EF22DB900CD3BEB /* ShareItem.m in Sources */,
 				EEDA4D521EE6B0DE0089E4F6 /* MJRefreshGifHeader.m in Sources */,
+				EE3D3ADA1FC41FC80089C3AC /* BGTokenManager.m in Sources */,
 				EEDA4D7D1EE6B0DE0089E4F6 /* PicWordButton.m in Sources */,
 				EE7599DA1EF22DB900CD3BEB /* SimpleAnimationButtomVC.m in Sources */,
 				EEDA4D381EE6B0DE0089E4F6 /* RegisterVC.m in Sources */,
@@ -1540,6 +1597,7 @@
 				EEDA4D691EE6B0DE0089E4F6 /* UIImageView+WebCache.m in Sources */,
 				EE7599FB1EF2643700CD3BEB /* BGCommonFormCell.m in Sources */,
 				EEDA4D6B1EE6B0DE0089E4F6 /* UIView+WebCacheOperation.m in Sources */,
+				EE3D3ACD1FC419D60089C3AC /* RSAEncryptor.m in Sources */,
 				EEDA4D431EE6B0DE0089E4F6 /* MBProgressHUD+BWMExtension.m in Sources */,
 				EEDA4D6E1EE6B0DE0089E4F6 /* TZTestCell.m in Sources */,
 				EEDA4D3B1EE6B0DE0089E4F6 /* AFNetworkReachabilityManager.m in Sources */,

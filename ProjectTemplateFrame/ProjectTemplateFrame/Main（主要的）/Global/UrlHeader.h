@@ -15,12 +15,14 @@
 //http://120.55.117.108:8383/userapp
 
 //外网地址
-#define kHost @"http://120.55.117.108:8989/userapp/"
+#define kHost @"http://localhost:8080"
 
 //测试ip地址
 //#define kHost @"http://192.168.0.100:8080/userapp/"
 //#define kHost @"http://192.168.0.102:8080/userapp/"
 //#define kHost @"http://192.168.0.105:8080/userapp/"
+
+#define kTestUrl kHost@"/test"
 
 #pragma mark===============登录相关==================
 /**

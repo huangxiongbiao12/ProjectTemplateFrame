@@ -11,8 +11,12 @@
 
 //手机本地话
 #define kUserID @"kUserID"
+#define kToken @"kToken"
+#define kTokenExpairDate @"kTokenExpairDate"
 #define kUser @"kUser"
 #define kLogin @"kLogin"
+#define kPW @"kPW"
+#define kUserName @"kUserName"
 #define kHeadImageOriginalPath @"kHeadImageOriginalPath"
 #define kHeadImageCompressPath @"kHeadImageCompressPath"
 

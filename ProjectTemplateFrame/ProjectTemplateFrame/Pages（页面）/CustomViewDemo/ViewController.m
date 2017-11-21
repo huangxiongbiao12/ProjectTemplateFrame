@@ -31,6 +31,15 @@
     _vcArr = @[@"SimpleAnimationButtomVC",@"BGCommonButtonVC",@"BGPopDemoVC",@"BGLoadingHUDVC",@"BGLoopBannerViewVC",@"BGMenuScrollerVC",@"BGSettingVC",@"BGCommonFormDemoVC"];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [BGNetworking postUrl:kTestUrl parameters:@{@"name":@"",@"pw":@""} success:^(id responseObject) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
 #pragma mark-------
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
