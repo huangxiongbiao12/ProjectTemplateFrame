@@ -33,7 +33,7 @@
 }
 
 -(void)show {
-    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [window addSubview:self];
 }
 
