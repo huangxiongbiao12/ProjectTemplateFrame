@@ -66,6 +66,17 @@
     return params;
 }
 
+-(NSString *)toJsonStr {
+    NSDictionary *json;
+    if ([self isKindOfClass:[NSDictionary class]]) {
+        json = (NSDictionary*)self;
+    }else {
+        json = self.toJson;
+    }
+    NSData *data = [NSJSONSerialization dataWithJSONObject:json options:NSJSONWritingPrettyPrinted error:nil];
+    return  [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+}
+
 #pragma mark-------//获取属性的类型
 
 +(NSString *)getPropertyType:(NSString *)property {

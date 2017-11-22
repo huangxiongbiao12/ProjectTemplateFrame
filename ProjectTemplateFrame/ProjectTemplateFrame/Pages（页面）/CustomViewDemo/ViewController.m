@@ -33,7 +33,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [BGNetworking postUrl:kTestUrl parameters:@{@"name":@"",@"pw":@""} success:^(id responseObject) {
+    [BGNetworking postUrl:kTestUrl parameters:@{@"name":@"11",@"pw":@"dsads"} success:^(id responseObject) {
         
     } failure:^(NSError *error) {
         

@@ -107,6 +107,14 @@
     return [[NSCalendar currentCalendar] dateByAddingComponents:dateComponents toDate:self options:0];
 }
 
+//获取当前日期之后的几分钟之后
+- (NSDate *)dayInTheFollowingMinute:(NSInteger)minute
+{
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    dateComponents.minute = minute;
+    return [[NSCalendar currentCalendar] dateByAddingComponents:dateComponents toDate:self options:0];
+}
+
 //获取年月日对象
 - (NSDateComponents *)YMDComponents
 {

@@ -74,6 +74,14 @@
 /*获取当前日期几天之后的日期*/
 - (NSDate *)dayInTheFollowingDay:(NSInteger)day;
 
+/**
+ 获取当前时间多少分钟之后的时间
+
+ @param minute 分钟
+ @return 返回日期
+ */
+- (NSDate *)dayInTheFollowingMinute:(NSInteger)minute;
+
 /*返回两个日期相差几天*/
 + (NSInteger)getDayNumbertoDay:(NSDate *)today beforDay:(NSDate *)beforday;
 

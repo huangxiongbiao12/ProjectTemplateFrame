@@ -14,6 +14,8 @@
 #import "SecurityConf.h"
 #import "BGTokenManager.h"
 #import "RSAEncryptor.h"
+#import "RandomKeyManager.h"
+#import "EncryChecker.h"
 
 /**
  *  是否开启https SSL 验证
@@ -49,36 +51,31 @@ static NSString *AES_RANDOM_KEY = @"RandomAESKey";
 
 #pragma mark-------封装请求
 
-+(void)postUrl:(NSString*)url parameters:(NSDictionary*)parameters showHUD:(BOOL)show success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
++(void)postUrl:(NSString*)url parameters:(NSDictionary*)parametersOrg showHUD:(BOOL)show success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
     [[BGNetStatusChecker shareNetStatus] checkNetStatus];
     AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
-    ;
     manager.requestSerializer.timeoutInterval = timeOut;
-    
     [[BGTokenManager shareTokenManager] getToken:^{
         //将token封装入请求头
-        if ([BGSaveTool objectForKey:kToken]) {
+        if ([BGSaveTool objectForKey:kToken])
             [manager.requestSerializer setValue:[BGSaveTool objectForKey:kToken] forHTTPHeaderField:TOKNE_HEADER];
-        }
-        NSString *random = [RSAEncryptor encryptString:@"1234567812345678" publicKey:RSA_PUBLIC_KEY];
+        //  获取随机码，将随机码rsa加密后放在请求头中
+        NSString *random = [RSAEncryptor encryptString:[RandomKeyManager shareRandomKey].getRandomKey publicKey:RSA_PUBLIC_KEY];
          [manager.requestSerializer setValue:random forHTTPHeaderField:AES_RANDOM_KEY];
+        //  处理需要加密的url，将参数进行加密处理
+        NSDictionary *parameters = [EncryChecker encryUrl:url param:parametersOrg];
         // 加上这行代码，https ssl 验证。
         if(openHttpsSSL)
-        {
             [manager setSecurityPolicy:[self customSecurityPolicy]];
-        }
-        if (show) {
+        if (show)
             [MBProgressHUD showMessage:@"加载中..."];
-        }
-        DDLog(@"parameters:%@==url:%@==",parameters,url);
-        
+        DDLog(@"parameters:%@==url:%@==%@",parameters,url,parametersOrg);
         [manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             DDLog(@"====%@,%@==url:%@===parameters:%@",responseObject,responseObject[@"data"],url,parameters);
-            if (show) {
+            if (show)
                 [MBProgressHUD hideHUD];
-            }
             //登陆成功===================================
             if ([responseObject[@"status"] isEqualToNumber:@500]) {
                 if ([responseObject[@"data"] isKindOfClass:[NSArray class]]) {
@@ -99,13 +96,9 @@ static NSString *AES_RANDOM_KEY = @"RandomAESKey";
                 }
             }else{//登陆失败=============================
                 if ([responseObject[@"data"] isKindOfClass:[NSString class]]) {
-                    //                if (show) {
                     [MBProgressHUD showError:responseObject[@"data"]];
-                    //                }
                 }else{
-                    //                if (show) {
                     [MBProgressHUD showError:@"信息错误"];
-                    //                }
                 }
                 NSError *error1;
                 failure(error1);

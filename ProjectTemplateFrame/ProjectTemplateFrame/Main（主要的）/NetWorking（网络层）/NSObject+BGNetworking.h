@@ -19,6 +19,7 @@
 +(id)parseData:(id)responseObject;
 //对象转json
 -(NSDictionary*)toJson;
+-(NSString*)toJsonStr;
 //获取属性的类型
 +(NSString*)getPropertyType:(NSString*)property;
 -(NSString*)getPropertyType:(NSString*)property;

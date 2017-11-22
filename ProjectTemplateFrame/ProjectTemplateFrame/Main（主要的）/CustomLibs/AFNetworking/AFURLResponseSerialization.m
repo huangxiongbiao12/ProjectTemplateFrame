@@ -22,6 +22,7 @@
 #import "AFURLResponseSerialization.h"
 
 #import <TargetConditionals.h>
+#import "EncryChecker.h"
 
 #if TARGET_OS_IOS
 #import <UIKit/UIKit.h>
@@ -248,6 +249,12 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
     // See https://github.com/rails/rails/issues/1742
     BOOL isSpace = [data isEqualToData:[NSData dataWithBytes:" " length:1]];
     if (data.length > 0 && !isSpace) {
+        //  自定义解密模块===
+#warning custom encry
+        if (data) {
+            data = [EncryChecker decryUrl:response.URL.absoluteString data:data];
+        }
+        //================
         responseObject = [NSJSONSerialization JSONObjectWithData:data options:self.readingOptions error:&serializationError];
     } else {
         return nil;
