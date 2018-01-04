@@ -176,6 +176,7 @@
 		EEDA4DA41EE6B0DE0089E4F6 /* HWTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA4CB61EE6B0DE0089E4F6 /* HWTabBar.m */; };
 		EEE7ABAC1EFBBFF80051062A /* BGBanBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE7ABAB1EFBBFF80051062A /* BGBanBackViewController.m */; };
 		EEF2A7F21FFDC0760044E1F4 /* BGVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF2A7F01FFDC0750044E1F4 /* BGVersionManager.m */; };
+		EEF2A7F51FFDC45C0044E1F4 /* DeviceInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF2A7F41FFDC45C0044E1F4 /* DeviceInfoManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -523,6 +524,8 @@
 		EEE7ABAB1EFBBFF80051062A /* BGBanBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGBanBackViewController.m; sourceTree = "<group>"; };
 		EEF2A7F01FFDC0750044E1F4 /* BGVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGVersionManager.m; sourceTree = "<group>"; };
 		EEF2A7F11FFDC0750044E1F4 /* BGVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGVersionManager.h; sourceTree = "<group>"; };
+		EEF2A7F31FFDC45B0044E1F4 /* DeviceInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfoManager.h; sourceTree = "<group>"; };
+		EEF2A7F41FFDC45C0044E1F4 /* DeviceInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -821,6 +824,8 @@
 		EEA5F6821EF0EF680043A8C8 /* MangerTools */ = {
 			isa = PBXGroup;
 			children = (
+				EEF2A7F31FFDC45B0044E1F4 /* DeviceInfoManager.h */,
+				EEF2A7F41FFDC45C0044E1F4 /* DeviceInfoManager.m */,
 				EEA5F6831EF0EF680043A8C8 /* BGAutoFitTool.h */,
 				EEA5F6841EF0EF680043A8C8 /* BGAutoFitTool.m */,
 				EEA5F6851EF0EF680043A8C8 /* BGCheckLoginTool.h */,
@@ -1536,6 +1541,7 @@
 				EE7599D41EF22DB900CD3BEB /* BGMenuScrollerVC.m in Sources */,
 				EEDA4D4D1EE6B0DE0089E4F6 /* MJRefreshAutoNormalFooter.m in Sources */,
 				EE7599D51EF22DB900CD3BEB /* BGPopDemoVC.m in Sources */,
+				EEF2A7F51FFDC45C0044E1F4 /* DeviceInfoManager.m in Sources */,
 				EEDA4D801EE6B0DE0089E4F6 /* GTMBase64.m in Sources */,
 				EEDA4D2F1EE6B0DE0089E4F6 /* AppDelegate.m in Sources */,
 				EEDA4D571EE6B0DE0089E4F6 /* NSBundle+MJRefresh.m in Sources */,
