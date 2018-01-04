@@ -403,4 +403,88 @@ static NSString *AES_RANDOM_KEY = @"RandomAESKey";
     
 }
 
+#pragma mark------- 普通请求不判断状态
+
++(void)postCommonUrl:(NSString*)url parameters:(NSDictionary*)parameters  success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
+    [self postCommonUrl:url parameters:parameters showHUD:YES success:success failure:failure];
+}
+
++(void)postNoHUDCommonUrl:(NSString*)url parameters:(NSDictionary*)parameters  success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
+    [self postCommonUrl:url parameters:parameters showHUD:NO success:success failure:failure];
+}
+
++(void)postCommonUrl:(NSString*)url parameters:(NSDictionary*)parameters showHUD:(BOOL)show success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
+    [[BGNetStatusChecker shareNetStatus] checkNetStatus];
+    AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
+    manager.requestSerializer.timeoutInterval = timeOut;
+    [manager.requestSerializer setValue:@"application/x-www-form-urlencoded;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    if(openHttpsSSL)
+    {
+        [manager setSecurityPolicy:[self customSecurityPolicy]];
+    }
+    if (show) {
+        [MBProgressHUD showMessage:@"加载中..."];
+    }
+    DDLog(@"parameters:%@==url:%@==",parameters,url);
+    [manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DDLog(@"====%@,%@==url:%@===parameters:%@",responseObject,responseObject[@"data"],url,parameters);
+        if (show) {
+            [MBProgressHUD hideHUD];
+        }
+        success(responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (show) {
+            [MBProgressHUD hideHUD];
+        }
+        DDLog(@"%s==error--%@",__func__,error);
+        if (error) {
+            failure(error);
+        }
+    }];
+}
+
++(void)getCommonUrl:(NSString*)url parameters:(NSDictionary*)parameters  success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
+    [self getCommonUrl:url parameters:parameters showHUD:YES success:success failure:failure];
+}
+
++(void)getNoHUDCommonUrl:(NSString*)url parameters:(NSDictionary*)parameters  success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
+    [self getCommonUrl:url parameters:parameters showHUD:NO success:success failure:failure];
+}
+
++(void)getCommonUrl:(NSString*)url parameters:(NSDictionary*)parameters showHUD:(BOOL)show success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure {
+    [[BGNetStatusChecker shareNetStatus] checkNetStatus];
+    AFHTTPSessionManager *manager = [AFAppDotNetAPIClient sharedClient];
+    manager.requestSerializer.timeoutInterval = timeOut;
+    [manager.requestSerializer setValue:@"application/x-www-form-urlencoded;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    if(openHttpsSSL)
+    {
+        [manager setSecurityPolicy:[self customSecurityPolicy]];
+    }
+    if (show) {
+        [MBProgressHUD showMessage:@"加载中..."];
+    }
+    DDLog(@"parameters:%@==url:%@==",parameters,url);
+    [manager GET:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DDLog(@"====%@,%@==url:%@===parameters:%@",responseObject,responseObject[@"data"],url,parameters);
+        if (show) {
+            [MBProgressHUD hideHUD];
+        }
+        success(responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (show) {
+            [MBProgressHUD hideHUD];
+        }
+        DDLog(@"%s==error--%@",__func__,error);
+        if (error) {
+            failure(error);
+        }
+    }];
+}
+
 @end

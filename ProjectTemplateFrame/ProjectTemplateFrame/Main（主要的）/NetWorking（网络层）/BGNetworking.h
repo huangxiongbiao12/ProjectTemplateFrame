@@ -23,6 +23,18 @@
 
 +(void)postNoHUDUrl:(NSString*)url parameters:(NSDictionary*)parameters success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure;
 
++(void)postCommonUrl:(NSString*)url parameters:(NSDictionary*)parameters  success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure;
+
++(void)postNoHUDCommonUrl:(NSString*)url parameters:(NSDictionary*)parameters  success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure;
+
++(void)postCommonUrl:(NSString*)url parameters:(NSDictionary*)parameters showHUD:(BOOL)show success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure;
+
++(void)getCommonUrl:(NSString*)url parameters:(NSDictionary*)parameters  success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure;
+
++(void)getNoHUDCommonUrl:(NSString*)url parameters:(NSDictionary*)parameters  success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure;
+
++(void)getCommonUrl:(NSString*)url parameters:(NSDictionary*)parameters showHUD:(BOOL)show success:(void(^)(id responseObject)) success failure:(void(^)(NSError *error)) failure;
+
 + (nullable NSURLSessionDataTask *)POST:(NSString *_Nullable)URLString
                              parameters:(nullable id)parameters
               constructingBodyWithBlock:(nullable void (^)(id<AFMultipartFormData>_Nullable formData))block

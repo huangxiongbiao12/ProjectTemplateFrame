@@ -175,6 +175,7 @@
 		EEDA4D861EE6B0DE0089E4F6 /* public.cer in Resources */ = {isa = PBXBuildFile; fileRef = EEDA4C811EE6B0DE0089E4F6 /* public.cer */; };
 		EEDA4DA41EE6B0DE0089E4F6 /* HWTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA4CB61EE6B0DE0089E4F6 /* HWTabBar.m */; };
 		EEE7ABAC1EFBBFF80051062A /* BGBanBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE7ABAB1EFBBFF80051062A /* BGBanBackViewController.m */; };
+		EEF2A7F21FFDC0760044E1F4 /* BGVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF2A7F01FFDC0750044E1F4 /* BGVersionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -520,6 +521,8 @@
 		EEDA4CB61EE6B0DE0089E4F6 /* HWTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTabBar.m; sourceTree = "<group>"; };
 		EEE7ABAA1EFBBFF80051062A /* BGBanBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGBanBackViewController.h; sourceTree = "<group>"; };
 		EEE7ABAB1EFBBFF80051062A /* BGBanBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGBanBackViewController.m; sourceTree = "<group>"; };
+		EEF2A7F01FFDC0750044E1F4 /* BGVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGVersionManager.m; sourceTree = "<group>"; };
+		EEF2A7F11FFDC0750044E1F4 /* BGVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGVersionManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -836,6 +839,8 @@
 				EEA5F6921EF0EF680043A8C8 /* ZLAlertView.m */,
 				EEE7ABAA1EFBBFF80051062A /* BGBanBackViewController.h */,
 				EEE7ABAB1EFBBFF80051062A /* BGBanBackViewController.m */,
+				EEF2A7F11FFDC0750044E1F4 /* BGVersionManager.h */,
+				EEF2A7F01FFDC0750044E1F4 /* BGVersionManager.m */,
 			);
 			path = MangerTools;
 			sourceTree = "<group>";
@@ -1573,6 +1578,7 @@
 				EEDA4D4A1EE6B0DE0089E4F6 /* MJRefreshFooter.m in Sources */,
 				EE759A021EF2738400CD3BEB /* BGCommonFormDemoVC.m in Sources */,
 				EEDA4D421EE6B0DE0089E4F6 /* MBProgressHUD.m in Sources */,
+				EEF2A7F21FFDC0760044E1F4 /* BGVersionManager.m in Sources */,
 				EEDA4D511EE6B0DE0089E4F6 /* MJRefreshBackStateFooter.m in Sources */,
 				EEA5F6A21EF0EF680043A8C8 /* LocationManager.m in Sources */,
 				EE7599ED1EF25C8300CD3BEB /* BGSettingCell.m in Sources */,
